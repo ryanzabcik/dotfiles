@@ -11,10 +11,13 @@ prompt_style=$reset_style
 command_style=$reset_style'\[\033[1;29m\]' # bold black
 # Prompt variable:
 
+
+
 # a more compatible PS1 for agetty terminal
 if [[ $TERM != *256color ]]; 
     then PS1="$status_style"'$fill \t\n'"$prompt_style\h \W "'$MESSAGE'"> $command_style"
     else PS1="$status_style"'$fill \t\n'"$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
+    # other candidates for prelude characters: 𝄞❱➪▶⊳∬
 fi
 
 # Reset color for command output
@@ -36,7 +39,7 @@ function prompt_command {
     # If this is an xterm set the title to user@host:dir
     case "$TERM" in
     xterm*|rxvt*)
-        bname=`basename "${PWD/$HOME/~}"`
+        bname=$(basename "${PWD/$HOME/~}")
         echo -ne "\033]0;${bname}: ${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"
         ;;
     *)
