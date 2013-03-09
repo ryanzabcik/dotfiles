@@ -9,5 +9,5 @@ alias db='cd /data/Dropbox'
 alias update-burg='burg-mkconfig -o /boot/burg/burg.cfg'
 alias pushd="pushd ."
 alias randomport="random.org 41952 65535"
-
-
+alias yupd="yaourt -Syua"
+alias upd="sudo pacman -Syu"
