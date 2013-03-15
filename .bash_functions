@@ -59,7 +59,7 @@ function message {
 }
 
 function parse_git_dirty {
-    if [[ $(git status 2> /dev/null | tail -n1) != "nothing*" ]];
+    if [[ $(git status 2> /dev/null | tail -n1) != nothing* ]];
         then echo -n "*"
     fi
 }
