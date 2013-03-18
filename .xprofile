@@ -8,3 +8,4 @@ xflux -z 78705 -k 4800
 # xmodmap /home/ryan/.xmodmap
 # export pacman_updates_availible=$(sudo pacman -Syup | wc -l)
 # dropboxd
+sleep 2 && nitrogen --restore &
