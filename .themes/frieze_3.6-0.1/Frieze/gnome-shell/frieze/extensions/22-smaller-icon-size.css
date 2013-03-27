@@ -1,0 +1,18 @@
+/**
+ * Title: Smaller icon size in the application overview
+ * Description: Reduces the default icon size of applications in the activities overview
+ */
+
+.icon-grid .overview-icon {
+    icon-size: 48px;
+}
+
+.icon-grid {
+    spacing: 30px;
+    -shell-grid-horizontal-item-size: 84px;
+    -shell-grid-vertical-item-size: 84px;
+}
+
+#searchResultsContent {
+    spacing: 30px;
+}

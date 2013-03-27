@@ -1,0 +1,80 @@
+/* Screen Shield
+---------------------------------------------*/
+
+.screen-shield-background {
+    background: #666;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+
+#lockDialogGroup {
+    background: #666 url("img/lock-screen-bg.png");
+    background-repeat: repeat;
+}
+
+.screen-shield-arrows {
+    padding-bottom: 3em;
+}
+
+.screen-shield-arrows Gjs_Arrow {
+    width: 80px;
+    height: 48px;
+    -arrow-thickness: 12px;
+    -arrow-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.screen-shield-contents-box {
+    spacing: 48px;
+}
+
+.screen-shield-clock {
+    text-shadow: rgba(0,0,0,0.6) 0 0 2px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 20px 25px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+.screen-shield-clock-time {
+    font-size: 72pt;
+}
+
+.screen-shield-clock-date {
+    font-size: 28pt;
+}
+
+#screenShieldNotifications {
+    border-radius: 8px;
+    background-color: rgba(0.0, 0.0, 0.0, 0.9);
+    border: 2px solid #868686;
+    max-height: 500px;
+    padding: 18px 0;
+    box-shadow: .5em .5em 20px rgba(0, 0, 0, 0.5);
+}
+
+.screen-shield-notifications-box {
+    spacing: 18px;
+}
+
+.screen-shield-notification-source {
+    padding: 0 24px;
+    spacing: 5px;
+}
+
+.screen-shield-notification-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #babdb6;
+}
+
+.screen-shield-notifications-box .notification {
+    background-color: transparent;
+}
+
+.screen-shield-notifications-box .summary-notification-stack-scrollview {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+

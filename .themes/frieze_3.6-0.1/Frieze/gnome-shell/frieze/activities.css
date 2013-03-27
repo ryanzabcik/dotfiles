@@ -1,0 +1,278 @@
+/* Activities Overview
+---------------------------------------------*/
+
+#overview,
+#viewSelector {
+    spacing: 20px;
+}
+
+#viewSelector {
+    padding-top: 25px;
+}
+
+/* Workspaces */
+
+.workspace-controls {
+    visible-width: 32px;
+}
+
+.workspace-thumbnails-background {
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 9px;
+}
+
+.workspace-thumbnails-background:ltr {
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.workspace-thumbnails-background:rtl {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.workspace-thumbnails {
+    spacing: 9px;
+}
+
+.workspace-thumbnail-indicator {
+    outline: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+/* Windows */
+
+.window-caption {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0);
+    background-gradient-end: rgba(255,255,255,0.05);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 8px 10px 5px;
+    spacing: 25px;
+    -shell-caption-spacing: -2px;
+}
+
+.window-close {
+    background-image: url("img/close-window.svg");
+    height: 34px;
+    width: 34px;
+}
+
+.window-close {
+    -shell-close-overlap: 18px;
+}
+
+/* Dash */
+
+#dash {
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 4px 6px 5px;
+}
+
+#dash:ltr {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+#dash:rtl {
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.dash-label {
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 5px 10px;
+    -x-offset: 11px;
+}
+
+/* Search box */
+
+#searchEntry {
+    width: 300px;
+    padding: .45em .8em;
+}
+
+.search-entry-icon {
+    icon-size: 1.09em;
+    color: #ccc;
+}
+
+/* Search results */
+
+#searchResults {
+    spacing: 12px;
+}
+
+#searchResults:ltr {
+    padding-right: 32px;
+}
+
+#searchResults:rtl {
+    padding-left: 32px;
+}
+
+#searchResultsContent {
+    spacing: 36px;
+}
+
+#searchResultsContent:ltr {
+    padding-right: 20px;
+}
+
+#searchResultsContent:rtl {
+    padding-left: 20px;
+}
+
+.search-section-header {
+    width: 400px;
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255,255,255,0.05);
+    background-gradient-end: rgba(255,255,255,0);
+    border-radius: 3px;
+    padding: .5em .9em .45em .9em;
+    font-size: .9em;
+    spacing: 4px;
+}
+
+.search-statustext {
+    padding: .4em .8em;
+    spacing: 4px;
+}
+
+.search-section-results {
+    padding-top: 12px;
+}
+
+.search-section-list-results {
+    spacing: 4px;
+}
+
+.results-container {
+    spacing: 4px;
+}
+
+/* App grid */
+
+.icon-grid {
+    padding: 0em .8em;
+    spacing: 36px;
+    -shell-grid-horizontal-item-size: 100px;
+    -shell-grid-vertical-item-size: 100px;
+}
+
+.icon-grid .overview-icon {
+    icon-size: 64px;
+}
+
+.all-app {
+    spacing: 20px;
+}
+
+.all-app:ltr {
+    padding-right: 20px;
+}
+
+.all-app:rtl {
+    padding-left: 20px;
+}
+
+/* App filter */
+
+.app-filter {
+    width: 200px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: .45em .8em;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.app-filter:hover,
+.app-filter:selected,
+.app-filter:focus {
+    color: #fff;
+}
+
+.app-filter:selected {
+    border-color: rgba(0,0,0,0.2);
+    background-gradient-direction: vertical;
+	background-gradient-start: rgba(255,255,255,0.3);
+	background-gradient-end: rgba(255,255,255,0.1);
+	box-shadow: inset 0 0 2px rgba(255,255,255,0.3);
+}
+
+/* Apps */
+
+.show-apps,
+.dash-item-container > .app-well-app {
+    padding: 4px 2px 3px;
+}
+
+.show-apps > .overview-icon,
+.app-well-app > .overview-icon,
+.search-result-content > .overview-icon {
+    border-radius: 4px;
+    padding: 3px;
+    border: 1px solid transparent;
+    text-align: center;
+    spacing: 1px;
+}
+
+.show-apps:hover > .overview-icon,
+.show-apps:focus > .overview-icon,
+.show-apps:checked > .overview-icon,
+.app-well-app:hover > .overview-icon,
+.app-well-app:focus > .overview-icon,
+.app-well-app:selected > .overview-icon,
+.remove-favorite:hover > .overview-icon,
+.search-result-content:hover > .overview-icon,
+.search-result-content:focus > .overview-icon,
+.search-result-content:selected > .overview-icon {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.1);
+    background-gradient-end: rgba(255,255,255,0.05);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.1);
+    border-color: rgba(0,0,0,0.1);
+}
+
+.app-well-app.running > .overview-icon {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.3);
+    border-color: rgba(0,0,0,0.2);
+}
+
+.app-well-app.running:hover > .overview-icon,
+.app-well-app.running:focus > .overview-icon,
+.app-well-app.running:selected > .overview-icon {
+    background-gradient-start: rgba(255,255,255,0.4);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.4);
+}
+
+.show-apps .show-apps-icon {
+    color: #ccc;
+}
+
+.show-apps:hover .show-apps-icon,
+.show-apps:focus .show-apps-icon,
+.show-apps:checked .show-apps-icon {
+    color: #fff;
+}
+
+.show-apps:checked > .overview-icon {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,1);
+    background-gradient-end: rgba(255,255,255,0.075);
+}
+
+.app-well-menu {
+    -boxpointer-gap: 3px;
+}
+

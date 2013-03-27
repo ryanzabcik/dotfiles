@@ -1,0 +1,258 @@
+/* Font Properties
+---------------------------------------------*/
+
+stage {
+    font-family: roboto, droid sans, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+    color: #fff;
+}
+
+.login-dialog-title,
+.login-dialog-username,
+.login-dialog-user-list-item-name,
+.status-chooser-user-name,
+.end-session-dialog-subject,
+.show-processes-dialog-subject,
+.mount-question-dialog-subject,
+.prompt-dialog-headline,
+.polkit-dialog-user-layout {
+    font-size: 1.1em;
+}
+
+.calendar-day-base {
+    font-size: .75em;
+}
+
+.calendar-month-label,
+.events-day-dayname,
+.events-day-time,
+.events-day-task,
+.dash-label,
+.window-caption,
+.switcher-list,
+.run-dialog-error-label,
+.app-well-app > .overview-icon,
+.remove-favorite > .overview-icon,
+.search-result-content > .overview-icon,
+.chat-meta-message,
+.end-session-dialog-app-list-item-description {
+    font-size: .85em;
+}
+
+/* Hyperlink Properties
+---------------------------------------------*/
+
+.shell-link {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.shell-link:hover {
+    color: #fff;
+}
+
+/* Scrollbar Properties
+---------------------------------------------*/
+
+StScrollBar {
+    padding: 0;
+}
+
+StScrollView.vfade {
+    -st-vfade-offset: 68px;
+}
+
+StScrollView.hfade {
+    -st-hfade-offset: 68px;
+}
+
+StScrollView StScrollBar {
+    min-width: 10px;
+    min-height: 10px;
+}
+
+StScrollBar StBin#trough {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+StScrollBar StButton#vhandle {
+    background-gradient-direction: horizontal;
+}
+
+StScrollBar StButton#hhandle {
+    background-gradient-direction: vertical;
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.12);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.3);
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#vhandle:active,
+StScrollBar StButton#hhandle:hover,
+StScrollBar StButton#hhandle:active {
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.15);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.4);
+}
+
+/* Entry Properties
+---------------------------------------------*/
+
+StEntry {
+    selection-background-color: #fff;
+    selected-color: #333;
+    caret-size: 1px;
+    caret-color: #ccc;
+}
+
+.notification StEntry,
+.login-dialog-prompt-entry,
+.prompt-dialog-password-entry {
+    padding: .45em .5em;
+}
+
+#searchEntry,
+.notification StEntry,
+.login-dialog-prompt-entry,
+.prompt-dialog-password-entry {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(0,0,0,0.2);
+    background-gradient-end: rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    color: #ccc;
+}
+
+#searchEntry:hover,
+#searchEntry:focus,
+.notification StEntry:focus,
+.login-dialog-prompt-entry:focus,
+.prompt-dialog-password-entry:focus {
+    background-gradient-start: rgba(0,0,0,0.25);
+    background-gradient-end: rgba(0,0,0,0.15);
+    color: #fff;
+}
+
+.login-dialog-prompt-entry .capslock-warning,
+.prompt-dialog-password-entry .capslock-warning {
+    icon-size: 1.09em;
+    warning-color: #ccc;
+    padding: 0 4px;
+}
+
+/* Button Properties
+---------------------------------------------*/
+
+.dash-search-button,
+.notification-button,
+.notification-icon-button,
+.hotplug-notification-item,
+.hotplug-resident-eject-button,
+.modal-dialog-button,
+.keyboard-key {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.3);
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.dash-search-button:hover,
+.dash-search-button:selected,
+.dash-search-button:focus,
+.notification-button:hover,
+.notification-button:focus,
+.notification-icon-button:hover,
+.notification-icon-button:focus,
+.hotplug-notification-item:hover,
+.hotplug-notification-item:focus,
+.hotplug-resident-eject-button:hover,
+.modal-dialog-button:hover,
+.modal-dialog-button:focus,
+.keyboard-key:hover {
+    background-gradient-start: rgba(255,255,255,0.4);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.4);
+}
+
+.dash-search-button:active,
+.dash-search-button:pressed,
+.notification-button:active,
+.notification-icon-button:active,
+.hotplug-notification-item:active,
+.hotplug-resident-eject-button:active,
+.modal-dialog-button:active,
+.modal-dialog-button:pressed,
+.keyboard-key:active,
+.keyboard-key:checked {
+    background-gradient-start: rgba(255,255,255,0.2);
+    background-gradient-end: rgba(255,255,255,0.2);
+}
+
+.notification-icon-button:insensitive,
+.notification-button:insensitive,
+.modal-dialog-button:insensitive {
+    color: #888;
+}
+
+/* Checkbox Properties
+---------------------------------------------*/
+
+.check-box ShellGenericContainer {
+    spacing: .8em;
+}
+
+.check-box StBin {
+    width: 24px;
+    height: 22px;
+    background-image: url("img/checkbox-off.svg");
+}
+
+.check-box:focus StBin {
+    background-image: url("img/checkbox-off-focused.svg");
+}
+
+.check-box:checked StBin {
+    background-image: url("img/checkbox.svg");
+}
+
+.check-box:focus:checked StBin {
+    background-image: url("img/checkbox-focused.svg");
+}
+
+/* Popup Properties
+---------------------------------------------*/
+
+.popup-menu-boxpointer,
+.summary-boxpointer {
+    -arrow-background-color: rgba(0,0,0,0.85);
+    -arrow-border-width: 0;
+    -arrow-border-color: transparent;
+    -arrow-border-radius: 5px;
+}
+
+.popup-menu-boxpointer,
+.summary-boxpointer {
+    -arrow-base: 15px;
+    -arrow-rise: 8px;
+}
+
+/* Dialog Properties
+---------------------------------------------*/
+
+#LookingGlassDialog,
+.modal-dialog,
+.switcher-list,
+.workspace-switcher-container {
+    background-color: rgba(0,0,0,0.85);
+    border-radius: 5px;
+}
+

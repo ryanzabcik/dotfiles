@@ -1,0 +1,34 @@
+/**
+ * Frieze Gnome Shell, version 3.6-0.1
+ *   Copyright 2012 Jacob van Mourik
+ * 
+ * Portions adapted from Gnome's gnome-shell.css
+ *   Copyright 2009, Red Hat, Inc.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by 
+ * the Free Software Foundation, either version 3 of the License, or 
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@import url('frieze/general.css');
+@import url('frieze/popups.css');
+@import url('frieze/panel.css');
+@import url('frieze/activities.css');
+@import url('frieze/message-tray.css');
+@import url('frieze/switchers.css');
+@import url('frieze/dialogs.css');
+@import url('frieze/universal-access.css');
+@import url('frieze/screen-shield.css');
+
+/* DO NOT MODIFY THE CONTENT BELOW */
+
+@import url('frieze/extensions/10-transition-effects.css');

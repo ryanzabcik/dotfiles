@@ -1,0 +1,16 @@
+/**
+ * Title: Remove events area from calendar
+ * Description: Removes the events area from the calendar popup
+ */
+
+#calendarEventsArea,
+.calendar-vertical-separator {
+    min-width: 0;
+    max-width: 0;
+}
+
+.events-header-vbox,
+.events-header-hbox,
+#calendarEventsArea .popup-menu-item {
+    font-size: 0;
+}

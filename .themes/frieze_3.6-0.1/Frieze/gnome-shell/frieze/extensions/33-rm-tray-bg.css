@@ -1,0 +1,10 @@
+/**
+ * Title: Remove bottom panel background
+ * Description: Removes the background of the message-tray panel at the bottom of the screen
+ */
+
+#message-tray:overview {
+    background: none;
+    border: none;
+}
+

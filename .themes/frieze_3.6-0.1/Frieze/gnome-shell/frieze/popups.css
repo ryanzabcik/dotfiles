@@ -1,0 +1,410 @@
+/* Popup Menus
+---------------------------------------------*/
+
+.popup-menu {
+    min-width: 200px;
+}
+
+.popup-sub-menu StScrollBar {
+    padding: 4px;
+}
+
+.popup-sub-menu {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.05);
+    background-gradient-end: rgba(255,255,255,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.6);
+    padding-top: 1px;
+}
+
+.popup-combo-menu {
+    background-color: rgba(0,0,0,0.85);
+    box-shadow: inset 0 0 0 rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+    padding: 1px;
+}
+
+.popup-menu-content {
+    padding: .5em 1px;
+}
+
+/* Menu items */
+
+.popup-menu-item {
+    padding: .45em 1.5em;
+    spacing: 1em;
+}
+
+.popup-menu-item:insensitive {
+    color: #888;
+}
+
+.popup-menu-item:active,
+.popup-submenu-menu-item:open {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.3);
+}
+
+.popup-submenu-menu-item {
+    border-top: 1px solid transparent;
+}
+
+.popup-combobox-item {
+    spacing: 1em;
+}
+
+.popup-separator-menu-item {
+    -gradient-height: 2px;
+    -gradient-start: rgba(0,0,0,0);
+    -gradient-end: rgba(255,255,255,0.3);
+    -margin-horizontal: 0;
+    height: 1px;
+}
+
+.popup-alternating-menu-item:alternate {
+    font-weight: bold;
+}
+
+.popup-slider-menu-item {
+    height: 1em;
+    min-width: 15em;
+    -slider-height: .3em;
+    -slider-background-color: rgba(0,0,0,0.2);
+    -slider-border-color: rgba(255,255,255,0.2);
+    -slider-active-background-color: rgba(255,255,255,0.25);
+    -slider-active-border-color: rgba(255,255,255,0.2);
+    -slider-border-width: 1px;
+    -slider-handle-radius: .45em;
+}
+
+.popup-menu-item:hover .popup-slider-menu-item {
+    -slider-background-color: rgba(0,0,0,0.4);
+    -slider-active-background-color: rgba(255,255,255,0.3);
+    -slider-active-border-color: rgba(255,255,255,0.25);
+}
+
+.popup-device-menu-item {
+    spacing: .5em;
+}
+
+.popup-inactive-menu-item,
+.popup-inactive-menu-item:insensitive {
+    color: #fff;
+}
+
+.popup-subtitle-menu-item,
+.popup-subtitle-menu-item:insensitive {
+    font-weight: bold;
+}
+
+.popup-menu-icon {
+    icon-size: 1.09em;
+}
+
+.nm-menu-item-icons {
+    spacing: .5em;
+}
+
+/* Toggle switches */
+
+.toggle-switch {
+    width: 65px;
+    height: 22px;
+}
+
+.toggle-switch-us {
+    background-image: url("img/toggle-off-us.svg");
+}
+
+.popup-menu-item:hover .toggle-switch-us {
+    background-image: url("img/toggle-off-us-hover.svg");
+}
+
+.toggle-switch-us:checked {
+    background-image: url("img/toggle-on-us.svg");
+}
+
+.popup-menu-item:hover .toggle-switch-us:checked {
+    background-image: url("img/toggle-on-us-hover.svg");
+}
+
+.toggle-switch-intl {
+    background-image: url("img/toggle-off-intl.svg");
+}
+
+.popup-menu-item:hover .toggle-switch-intl {
+    background-image: url("img/toggle-off-intl-hover.svg");
+}
+
+.toggle-switch-intl:checked {
+    background-image: url("img/toggle-on-intl.svg");
+}
+
+.popup-menu-item:hover .toggle-switch-intl:checked {
+    background-image: url("img/toggle-on-intl-hover.svg");
+}
+
+/* Status chooser */
+
+.status-chooser {
+    spacing: .5em;
+    padding: .5em 1.5em;
+}
+
+.status-chooser .popup-menu-item {
+    padding-left: .45em;
+    padding-right: .45em;
+}
+
+.status-chooser-user-icon {
+    border-radius: 3px;
+    width: 64px;
+    height: 64px;
+}
+
+.status-chooser-user-icon:hover {
+    box-shadow: 0 0 2px 1px rgba(255,255,255,0.3);
+}
+
+.status-chooser-user-name {
+    min-width: 9em;
+    font-weight: bold;
+}
+
+.status-chooser-combo {
+    border-radius: 2px;
+}
+
+.status-chooser-combo .popup-combo-menu {
+    background-color: rgba(0,0,0,0.85);
+    box-shadow: inset 0px 0px 0px rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+    padding: 1px;
+}
+
+.status-chooser-combo .popup-menu-item {
+    padding-left: .45em;
+    padding-right: .45em;
+}
+
+.status-chooser-status-item,
+.status-chooser-combo .popup-combobox-item {
+    spacing: 4px;
+}
+
+/* Calendar Popup
+---------------------------------------------*/
+
+#calendarEventsArea {
+    min-width: 220px;
+}
+
+.calendar-vertical-separator {
+    -stipple-width: 0px;
+    -stipple-color: rgba(0,0,0,0);
+    width: 3px;
+    border-image: url("img/calendar-separator.svg") 1 1 1 1;
+}
+
+.calendar {
+    padding: 0 1.5em .45em;
+    spacing-rows: 0;
+    spacing-columns: 0;
+}
+
+.calendar-month-label {
+    padding: 1.6em 0;
+    color: #ccc;
+}
+
+.calendar-change-month-back {
+    width: 18px;
+    height: 12px;
+    background-image: url("img/calendar-arrow-left.svg");
+}
+
+.calendar-change-month-back:hover,
+.calendar-change-month-back:active {
+    background-image: url("img/calendar-arrow-left-hover.svg");
+}
+
+.calendar-change-month-back:rtl {
+    background-image: url("img/calendar-arrow-right.svg");
+}
+
+.calendar-change-month-back:rtl:hover,
+.calendar-change-month-back:rtl:active {
+    background-image: url("img/calendar-arrow-right-hover.svg");
+}
+
+.calendar-change-month-forward {
+    width: 18px;
+    height: 12px;
+    background-image: url("img/calendar-arrow-right.svg");
+}
+
+.calendar-change-month-forward:hover,
+.calendar-change-month-forward:active {
+    background-image: url("img/calendar-arrow-right-hover.svg");
+}
+
+.calendar-change-month-forward:rtl {
+    background-image: url("img/calendar-arrow-left.svg");
+}
+
+.calendar-change-month-forward:rtl:hover,
+.calendar-change-month-forward:rtl:active {
+    background-image: url("img/calendar-arrow-left-hover.svg");
+}
+
+.datemenu-date-label {
+    padding: .45em 1.5em 0;
+    font-weight: bold;
+}
+
+.calendar-day-base {
+    text-align: center;
+    width: 2.6em;
+    height: 2.5em;
+}
+
+.calendar-day-base:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.1);
+    background-gradient-end: rgba(255,255,255,0.05);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.1);
+}
+
+.calendar-day-base:active {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.3);
+}
+
+.calendar-day-base:hover,
+.calendar-day-base:active {
+    color: #fff;
+    border-radius: 2px;
+}
+
+.calendar-day-heading {
+    color: #999;
+    height: 1.6em;
+    border-image: url("img/calendar-day-border.svg") 1 1 1 1;
+}
+
+.calendar-week-number {
+    color: #999;
+    padding-top: .75em;
+    height: 1em;
+    width: 1.2em;
+}
+
+.calendar-week-number:ltr {
+    text-align: right;
+    padding-right: .6em;
+    border-image: url("img/calendar-week-border-ltr.svg") 1 1 1 1;
+}
+
+.calendar-week-number:rtl {
+    text-align: left;
+    padding-left: .6em;
+    border-image: url("img/calendar-week-border-rtl.svg") 1 1 1 1;
+}
+
+.calendar-day {
+    color: #ccc;
+}
+
+.calendar-today {
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar-other-month-day {
+    color: #666;
+}
+
+.calendar-day-with-events {
+    text-decoration: underline;
+}
+
+/* Events */
+
+.events-header-vbox {
+    spacing: 1.2em;
+    padding: .45em 1.5em;
+}
+
+.events-header-hbox {
+    padding-top: .5em;
+}
+
+.events-day-header {
+    font-weight: bold;
+}
+
+.events-day-dayname {
+    color: #999;
+}
+
+.events-day-dayname:ltr {
+    text-align: left;
+}
+
+.events-day-dayname:rtl {
+    text-align: right;
+}
+
+.events-day-time {
+    color: #ccc;
+}
+
+.events-day-time:ltr {
+    text-align: right;
+}
+
+.events-day-time:rtl {
+    text-align: left;
+}
+
+.events-day-task {
+    color: #999;
+}
+
+.events-day-name-box,
+.events-time-box {
+    min-width: 2em;
+}
+
+.events-day-name-box:ltr,
+.events-time-box:ltr {
+    padding-right: .5em;
+}
+
+.events-day-name-box:rtl,
+.events-time-box:rtl {
+    padding-left: .5em;
+}
+
+/* IBus Candidate Popup
+---------------------------------------------*/
+
+.candidate-index {
+    padding: .45em;
+}
+
+.candidate-label {
+    padding: .45em;
+}
+
+.candidate-label:selected {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.3);
+}
+

@@ -1,0 +1,26 @@
+/** 
+ * Title: Darker panel backgrounds
+ * Description: Makes the background of the top, bottom, dash and workspaces panels darker
+ */
+ 
+#dash,
+#message-tray:overview,
+.workspace-thumbnails-background {
+    background-color: rgba(0,0,0,0.4);
+}
+
+#panel {
+	background-gradient-start: rgba(0,0,0,0.3);
+	background-gradient-end: rgba(0,0,0,0.5);
+}
+
+#searchEntry {
+	background-gradient-start: rgba(0,0,0,0.4);
+	background-gradient-end: rgba(0,0,0,0.3);
+}
+
+#searchEntry:focus,
+#searchEntry:hover {
+    background-gradient-start: rgba(0,0,0,0.45);
+    background-gradient-end: rgba(0,0,0,0.35);
+}

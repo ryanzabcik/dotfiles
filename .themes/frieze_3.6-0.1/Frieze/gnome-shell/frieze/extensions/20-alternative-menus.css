@@ -1,0 +1,74 @@
+/**
+ * Title: Alternative menus
+ * Description: Replaces the default look of the menus with an alternative look
+ */
+
+.popup-menu-boxpointer,
+.summary-boxpointer {
+    -arrow-background-color: rgba(0,0,0,0);
+    -arrow-rise: 4px;
+}
+
+.popup-menu-content,
+.summary-boxpointer #summary-right-click-menu {
+    padding: 7px 1px;
+}
+
+.panel-menu {
+    -boxpointer-gap: 5px;
+}
+
+.panel-menu .popup-menu-content {
+    padding-top: 3px;
+}
+
+.summary-boxpointer {
+    -boxpointer-gap: 7px;
+}
+
+.summary-boxpointer #summary-right-click-menu {
+    padding-bottom: 3px;
+}
+
+.summary-boxpointer .notification {
+    padding-bottom: 4px;
+}
+
+.summary-boxpointer .notification.multi-line-notification {
+    padding-bottom: 6px;
+}
+
+#dash {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.show-apps,
+.dash-item-container > .app-well-app {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.app-well-menu {
+    -arrow-rise: 0;
+    -boxpointer-gap: 5px;
+}
+
+.dash-label {
+    -x-offset: 5px;
+}
+
+.popup-menu-boxpointer,
+.summary-boxpointer,
+#LookingGlassDialog,
+.modal-dialog,
+.switcher-list,
+.workspace-switcher-container {
+    background-gradient-direction: vertical;
+	background-gradient-start: rgba(0,0,0,0.8);
+    background-gradient-end: rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+}
+

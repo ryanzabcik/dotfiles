@@ -1,0 +1,82 @@
+/* Panel
+---------------------------------------------*/
+
+#panel {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(0,0,0,0.1);
+    background-gradient-end: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+    height: 1.86em;
+}
+
+#panelLeft, 
+#panelCenter,
+#panelRight {
+    spacing: 0;
+}
+
+/* Panel buttons */
+
+#appMenu,
+#panelUserMenu,
+.panel-status-button-box {
+    spacing: 4px;
+}
+
+#appMenu {
+    text-shadow: rgba(0,0,0,0.6) 0 0 2px;
+}
+
+.label-shadow {
+    color: transparent;
+}
+
+.panel-button #appMenuIcon,
+.panel-button:active #appMenuIcon,
+.panel-button:checked #appMenuIcon,
+.panel-button:focus #appMenuIcon {
+    app-icon-bottom-clip: 1px;
+}
+
+.app-menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.panel-button {
+    -natural-hpadding: 12px;
+    -minimum-hpadding: 6px;
+    font-weight: bold;
+    text-shadow: rgba(0,0,0,0.6) 0 0 2px;
+}
+
+.panel-button:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.25);
+    background-gradient-end: rgba(255,255,255,0.1);
+    border-image: url("img/panel-button-border.svg") 2 2 2 2;
+}
+
+.panel-button:active,
+.panel-button:focus,
+.panel-button:overview {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.12);
+    border-image: url("img/panel-button-border.svg") 2 2 2 2;
+}
+
+.panel-button .system-status-icon,
+.panel-button .popup-menu-icon {
+    icon-shadow: rgba(0,0,0,0.6) 0 0 2px;
+    icon-size: 1.09em;
+}
+
+.panel-menu {
+    -boxpointer-gap: 4px;
+}
+
