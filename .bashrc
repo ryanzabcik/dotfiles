@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # variables
-export LS_COLORS='di=1;34:fi=0:ln=36:pi=0:so=0:bd=0:cd=0:or=31:ex=32'
+export LS_COLORS='di=1;34:fi=0:ln=36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
 export EDITOR='vim'
 if [[ "$TERM" == "xterm" ]]; then 
     export TERM="xterm-256color"

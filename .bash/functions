@@ -16,7 +16,12 @@ function webpass {
 # automatically ls after cd'ing into a new directory
 
 function cd {
-    builtin cd "$@" && ls --color=auto
+    builtin cd "$@"
+    if [[ $LINES -lt $(ls | wc -l) ]]; then
+        echo -e "\e[1;31mtoo many files in this directory; use ls to view"
+    else
+        ls --color=auto
+    fi
 }
 
 function random.org {
@@ -37,15 +42,15 @@ function pacsize {
 
 # usage: plays back a text-to-speech recording of the argument(s)
 
-#function say { 
-#	if [[ "${1}" =~ -[a-z]{2} ]];
-#		then local lang=${1#-}; 
-#			local text="${*#$1}"; 
-#		else local lang=${LANG%_*}; 
-#			local text="$*";
-#	fi;
-# 	clvc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /dev/null ; 
-#}
+function say { 
+	if [[ "${1}" =~ -[a-z]{2} ]]
+		then local lang=${1#-} 
+			local text="${*#$1}" 
+		else local lang=${LANG%_*} 
+			local text="$*"
+	fi
+ 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null 
+}
 
 # directory-specific message
 

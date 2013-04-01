@@ -14,7 +14,7 @@ command_style=$reset_style'\[\033[1;29m\]' # bold black
 if [[ $TERM != *256color ]]; 
     then PS1="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $command_style"
     else PS1="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
-    # other candidates for prelude characters: 𝄞❱➪▶⊳∬
+    # other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
 fi
 
 # a more distinguished root style
