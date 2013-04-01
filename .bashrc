@@ -22,6 +22,7 @@ fi
 
 # preferences
 bind 'set completion-ignore-case on'
+shopt -s dotglob
 
 if [ -x "/usr/bin/pacman" ]; then
     # one-line string containing all the updates availible
