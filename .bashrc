@@ -13,7 +13,7 @@ if [[ "$TERM" == "xterm" ]]; then
 fi
 
 # external scripts
-if [ -d ".bash" ]; then
+if [ -d "$HOME/.bash" ]; then
     for dotfile in $HOME/.bash/*
     do
         source $dotfile
