@@ -16,7 +16,7 @@ bland_style="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $comman
 if [[ $TERM != *256color ]]; 
     then PS1=$bland_style
     else 
-        if [[ $(cat /etc/hostname) == tachyon-arch ]];
+        if [[ $(cat /etc/hostname) =~ tachyon-* ]];
             then PS1=$fancy_style_home
             else PS1=$fancy_style_other
         fi
