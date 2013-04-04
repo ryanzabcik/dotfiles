@@ -3,18 +3,22 @@
 fill="--- "
 
 reset_style='\[\033[00m\]'
-#if [ -z "$VIM" ];
 status_style=$reset_style'\[\033[0;90m\]' # gray color; use 0;37m for lighter color
-#    else status_style=$reset_style'\[\033[0;90;107m\]'
-#fi
 prompt_style=$reset_style
 command_style=$reset_style'\[\033[1;29m\]' # bold black
 
+fancy_style_home="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;118m\]\h \[\033[38;5;120m\]\W \[\033[38;5;122m\]"'$MESSAGE'"\[\033[38;5;123m\]❱ $command_style"
+fancy_style_other="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
+bland_style="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $command_style"
+# other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
+
 # a more compatible PS1 for agetty terminal
 if [[ $TERM != *256color ]]; 
-    then PS1="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $command_style"
-    else PS1="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
-    # other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
+    then PS1=$bland_style
+    else 
+        if [[ $(cat /etc/hostname) == tachyon-arch ]];
+            then PS1=$fancy_style_home
+            else PS1=$fancy_style_other
 fi
 
 # a more distinguished root style
