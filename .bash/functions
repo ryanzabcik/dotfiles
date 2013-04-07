@@ -17,7 +17,7 @@ function webpass {
 
 function cd {
     builtin cd "$@"
-    if [[ $LINES -lt $(ls | wc -l) ]]; then
+    if [[ $LINES -lt $(ls -C | wc -l) ]]; then
         echo -e "\e[1;31mtoo many files in this directory; use ls to view"
     else
         ls --color=auto
