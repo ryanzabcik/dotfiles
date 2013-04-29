@@ -11,7 +11,7 @@ if [ -x "/usr/bin/pacman" ]; then
                 else pacman_updates_string="\e[1;33mThere are $pacman_num_updates_availible updates availible: $pacman_updates_availible"
             fi
     fi
-
+    COLUMNS=$(tput cols)
     pacman_updates_string_wc=$(echo $pacman_updates_string | wc -w)
     # while the length of the update string is longer than columns:
     while [ "${#pacman_updates_string}" -gt "$COLUMNS" ]; do 
