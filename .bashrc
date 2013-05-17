@@ -27,3 +27,5 @@ fi
 # preferences
 bind 'set completion-ignore-case on'
 shopt -s dotglob
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
