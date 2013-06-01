@@ -6,13 +6,15 @@ alias lsdb='dropbox ls /data/Dropbox'
 alias up='cd ..'
 alias dl='cd /data/Downloads'
 alias db='cd /data/Dropbox'
-alias pushd="pushd ."
-alias randomport="random.org 41952 65535"
-alias yupd="yaourt -Syua --devel --noconfirm"
-alias upd="sudo pacman -Syu"
-alias rerun="clear && source ~/.bashrc"
-alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias vimcrypt="vim -u ~/.vimcrypt -x"
-alias y="yaourt --noconfirm"
+alias pushd='pushd .'
+alias randomport='random.org 41952 65535'
+alias yupd='yaourt -Syua --devel --noconfirm'
+alias upd='sudo pacman -Syu'
+alias rerun='clear && source ~/.bashrc'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias vimcrypt='vim -u ~/.vimcrypt -x'
+alias y='yaourt --noconfirm'
+alias :q='exit'
+alias :wq='exit'
