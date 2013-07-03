@@ -7,19 +7,25 @@ status_style=$reset_style'\[\033[0;90m\]' # gray color; use 0;37m for lighter co
 prompt_style=$reset_style
 command_style=$reset_style'\[\033[1;29m\]' # bold black
 
-fancy_style_other="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;118m\]\h \[\033[38;5;120m\]\W \[\033[38;5;122m\]"'$MESSAGE'"\[\033[38;5;123m\]❱ $command_style"
-fancy_style_home="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
+fancy_style_neutrino="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;118m\]\h \[\033[38;5;120m\]\W \[\033[38;5;122m\]"'$MESSAGE'"\[\033[38;5;123m\]❱ $command_style"
+fancy_style_tachyon="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
+fancy_style_foreign="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;196m\]\h \[\033[38;5;202m\]\W \[\033[38;5;208m\]"'$MESSAGE'"\[\033[38;5;214m\]❱ $command_style"
 bland_style="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $command_style"
 # other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
 
 # a more compatible PS1 for agetty terminal
 if [[ $TERM != *256color ]]; 
     then PS1=$bland_style
-    else 
-        if [[ $(cat /etc/hostname) =~ tachyon-* ]];
-            then PS1=$fancy_style_home
-            else PS1=$fancy_style_other
+else 
+    if [[ $(cat /etc/hostname) =~ tachyon* ]];
+        then PS1=$fancy_style_tachyon
+    else
+        if [[ $(cat /etc/hostname) =~ neutrino* ]];
+            then PS1=$fancy_style_neutrino
+        else
+            PS1=$fancy_style_foreign
         fi
+    fi
 fi
 
 # a more distinguished root style
