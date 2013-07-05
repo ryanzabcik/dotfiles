@@ -60,7 +60,7 @@ function message {
     if [[ $PWD == /home/ryan/git/* ]];
         then parse_git_branch
     fi
-    if [[ $PWD == /data/Dropbox ]];
+    if [[ $PWD == /media/data0/Dropbox ]];
         then dropbox status | tr '\n' ' '
     fi
 }
