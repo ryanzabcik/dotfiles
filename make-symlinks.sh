@@ -8,4 +8,4 @@ for file in dotfiles/*;
 do
     ln -s dotfiles/$file $file
 
-[ "$dotglob_status" == "off"] && shopt -u dotglob
+[ "$dotglob_status" == "off" ] && shopt -u dotglob
