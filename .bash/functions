@@ -113,3 +113,14 @@ function spaces-inbetween {
     done
     echo
 }
+
+function man {
+    env LESS_TERMCAP_mb=$(printf &quot;\e[1;31m&quot;) \
+	LESS_TERMCAP_md=$(printf &quot;\e[1;31m&quot;) \
+	LESS_TERMCAP_me=$(printf &quot;\e[0m&quot;) \
+	LESS_TERMCAP_se=$(printf &quot;\e[0m&quot;) \
+	LESS_TERMCAP_so=$(printf &quot;\e[1;44;33m&quot;) \
+	LESS_TERMCAP_ue=$(printf &quot;\e[0m&quot;) \
+	LESS_TERMCAP_us=$(printf &quot;\e[1;32m&quot;) \
+	man &quot;$@&quot;
+}
