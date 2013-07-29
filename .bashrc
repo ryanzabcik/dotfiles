@@ -9,12 +9,12 @@
 export LS_COLORS='di=1;34:fi=0:ln=36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
 export EDITOR='vim'
 export PAGER='less -R'
-export PATH="/usr/bin:/home/ryan/scripts/:/opt/android-sdk/platform-tools"
-if [[ "$TERM" == "xterm" ]]; then 
+export PATH="$PATH:/home/ryan/scripts/:/opt/android-sdk/platform-tools"
+if [ "$TERM" == "xterm" ]; then 
     export TERM="xterm-256color"
 fi
 
-if [ "$TERM" == screen ]; then
+if [ "$TERM" == "screen" ]; then
     export TERM="screen-256color"
 fi
 
