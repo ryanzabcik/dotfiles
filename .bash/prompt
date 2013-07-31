@@ -9,7 +9,7 @@ command_style=$reset_style'\[\033[1;29m\]' # bold black
 
 fancy_style_neutrino="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;118m\]\h \[\033[38;5;120m\]\W \[\033[38;5;122m\]"'$MESSAGE'"\[\033[38;5;123m\]❱ $command_style"
 fancy_style_tachyon="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
-fancy_style_foreign="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;198m\]\h \[\033[38;5;204m\]\W \[\033[38;5;210m\]"'$MESSAGE'"\[\033[38;5;216m\]❱ $command_style"
+fancy_style_foreign="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;129m\]\h \[\033[38;5;135m\]\W \[\033[38;5;141m\]"'$MESSAGE'"\[\033[38;5;147m\]❱ $command_style"
 bland_style="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $command_style"
 # other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
 
@@ -17,10 +17,10 @@ bland_style="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $comman
 if [[ $TERM != *256color ]]; 
     then PS1=$bland_style
 else 
-    if [[ $(cat /etc/hostname) =~ tachyon* ]];
+    if [[ $HOSTNAME =~ tachyon* ]];
         then PS1=$fancy_style_tachyon
     else
-        if [[ $(cat /etc/hostname) =~ neutrino* ]];
+        if [[ $HOSTNAME =~ neutrino* ]];
             then PS1=$fancy_style_neutrino
         else
             PS1=$fancy_style_foreign
