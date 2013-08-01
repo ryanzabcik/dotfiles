@@ -13,7 +13,9 @@ alias r='clear && source ~/.bashrc'
 alias y='yaourt --noconfirm'
 alias p='sudo pacman --noconfirm'
 alias n='until-success sudo netctl restart wlp8s0-Znet3'
-alias s='sudo systemctl'
+alias s='sudo'
+alias ss='sudo !!'
+alias sys='sudo systemctl'
 
 # new functions (particularly lengthy ones may be candidates for moving into .bash/functions)
 alias lsmnt='mount | column -t'
