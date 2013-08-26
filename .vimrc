@@ -25,3 +25,6 @@ set softtabstop=4
 
 set background=dark
 colorscheme wombat
+
+map Y "+y
+map P "+p
