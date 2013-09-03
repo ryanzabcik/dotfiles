@@ -9,7 +9,7 @@
 export LS_COLORS='di=1;34:fi=0:ln=36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
 export EDITOR='vim'
 export PAGER='less -R'
-export PATH="$PATH:/home/ryan/scripts/:/opt/android-sdk/platform-tools"
+export PATH="$PATH:/home/ryan/scripts/:/opt/android-sdk/platform-tools:/home/ryan/.cabal/bin"
 if [ "$TERM" == "xterm" ]; then 
     export TERM="xterm-256color"
 fi
