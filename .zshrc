@@ -37,6 +37,11 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# This is to force gnome-terminal to display colors
+if [ "$TERM" = xterm ]; then
+    TERM=xterm-256color
+fi
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
