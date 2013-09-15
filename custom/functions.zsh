@@ -82,3 +82,29 @@ function man {
 	LESS_TERMCAP_us=$(printf "\e[1;32m") \
 	man "$@";
 }
+
+function pwr {
+    if [ -z "$@" ]; then
+        echo "
+        pwr is a short function for controlling the system power.
+        usage: pwr <command>
+        
+        <command> is one of:
+            [h]ibernate
+            [s]hutdown or [p]oweroff
+            [r]eboot
+        note that only the first letter of each command is required.
+        "
+        return 1
+    elif [ "$1" = h* ]; then
+        sudo /usr/lib/systemd/systemd-sleep hibernate
+    elif [ "$1" = s* ] || [ "$1" = p* ]; then
+        sudo systemctl poweroff
+    elif [ "$1" = r* ]; then
+        sudo systemctl reboot
+    else
+        echo "could not parse argument. run the command without any arguments for usage instructions."
+        return 2
+    fi
+}
+
