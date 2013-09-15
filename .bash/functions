@@ -46,27 +46,6 @@ function say {
  	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null 
 }
 
-# directory-specific message
-
-function message {
-    if [[ $PWD == /home/ryan/git/* ]];
-        then parse_git_branch
-    fi
-    if [[ $PWD == /media/data0/Dropbox ]];
-        then dropbox status | tr '\n' ' '
-    fi
-}
-
-function parse_git_dirty {
-    if [[ $(git status 2> /dev/null | tail -n1) != nothing* ]];
-        then echo -n "*"
-    fi
-}
-
-function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/" | tr '\n' ' '
-}
-
 function typeout {
     msg=$1
     let lnstr=$(expr length "$msg")-1

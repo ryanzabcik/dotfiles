@@ -5,32 +5,13 @@ fill="--- "
 reset_style='\[\033[00m\]'
 status_style=$reset_style'\[\033[0;90m\]' # gray color; use 0;37m for lighter color
 prompt_style=$reset_style
-command_style=$reset_style'\[\033[1;29m\]' # bold black
 
-fancy_style_neutrino="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;118m\]\h \[\033[38;5;120m\]\W \[\033[38;5;122m\]"'$MESSAGE'"\[\033[38;5;123m\]❱ $command_style"
-fancy_style_tachyon="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;39m\]\h \[\033[38;5;37m\]\W \[\033[38;5;35m\]"'$MESSAGE'"\[\033[38;5;40m\]❱ $command_style"
-fancy_style_foreign="$status_style"'$fill'" \t\n$prompt_style\[\033[38;5;129m\]\h \[\033[38;5;135m\]\W \[\033[38;5;141m\]"'$MESSAGE'"\[\033[38;5;147m\]❱ $command_style"
-bland_style="$status_style"'$fill'" \t\n$prompt_style\h \W "'$MESSAGE'"> $command_style"
+PS1="$status_style"'$fill'" bash \t\n$prompt_style\h \W > "
 # other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
-
-# a more compatible PS1 for agetty terminal
-if [[ $TERM != *256color ]]; 
-    then PS1=$bland_style
-else 
-    if [[ $HOSTNAME =~ tachyon* ]];
-        then PS1=$fancy_style_tachyon
-    else
-        if [[ $HOSTNAME =~ neutrino* ]];
-            then PS1=$fancy_style_neutrino
-        else
-            PS1=$fancy_style_foreign
-        fi
-    fi
-fi
 
 # a more distinguished root style
 if [[ $(id -u) == 0 ]];
-    then PS1="$status_style"'$fill'" \t\n$prompt_style\[\033[1;31m\]\h \W"'$MESSAGE'" # $command_style"
+    then PS1="$status_style"'$fill'" \t\n$prompt_style\[\033[1;31m\]\h \W # "
 fi
 
 # Reset color for command output
@@ -41,7 +22,7 @@ trap 'echo -ne "\033[0m"' DEBUG EXIT
 function prompt_command {
 
     # create a $fill of all screen width minus the time string and a space:
-    let fillsize=${COLUMNS}-9
+    let fillsize=${COLUMNS}-14
     fill=""
     while [ "$fillsize" -gt "0" ]
     do
@@ -58,7 +39,5 @@ function prompt_command {
     *)
         ;;
     esac  
-
-    MESSAGE=$(message)
 }
 PROMPT_COMMAND=prompt_command
