@@ -96,11 +96,11 @@ function pwr {
         note that only the first letter of each command is required.
         "
         return 1
-    elif [ "$1" = h* ]; then
+    elif [[ "$1" = h* ]]; then
         sudo /usr/lib/systemd/systemd-sleep hibernate
-    elif [ "$1" = s* ] || [ "$1" = p* ]; then
+    elif [[ "$1" = s* ]] || [[ "$1" = p* ]]; then
         sudo systemctl poweroff
-    elif [ "$1" = r* ]; then
+    elif [[ "$1" = r* ]]; then
         sudo systemctl reboot
     else
         echo "could not parse argument. run the command without any arguments for usage instructions."
