@@ -28,3 +28,4 @@ colorscheme wombat
 
 map Y "+y
 map P "+p
+map <Esc><Esc> :w<CR>
