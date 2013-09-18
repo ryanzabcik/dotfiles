@@ -16,6 +16,7 @@ alias y='yaourt --noconfirm'
 alias p='sudo pacman --color auto'
 alias s='sudo'
 alias v='vim'
+alias t='tmux attach | tmux new'
 alias sys='sudo systemctl'
 
 # new functions 
@@ -30,6 +31,7 @@ alias nettest='ping -c 5 utexas.edu && curl http://speedtest.dallas.linode.com/1
 alias netstop='sudo netctl stop-all'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias pez='ssh ryanz@pez.cs.utexas.edu'
+alias nfs='ssh rzabcik_zabcik@ssh.phx.nearlyfreespeech.net'
 alias backup='sudo rsync -aPAX --delete --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found} /* /media/backup'
 alias hibernate='sudo /usr/lib/systemd/systemd-sleep hibernate'
 
