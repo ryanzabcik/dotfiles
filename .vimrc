@@ -26,6 +26,11 @@ set softtabstop=4
 set background=dark
 colorscheme wombat
 
+let mapleader=","
+
+map ; :
+noremap ;; ;
+
 map Y "+y
 map P "+p
-map <Esc><Esc> :w<CR>
+nmap <Esc> :w<CR>
