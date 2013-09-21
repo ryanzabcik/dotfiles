@@ -37,7 +37,7 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# This is to force gnome-terminal to display colors
+#This is to force gnome-terminal to display colors
 if [ "$TERM" = xterm ]; then
     TERM=xterm-256color
 fi
@@ -57,3 +57,4 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
+bindkey "^R" history-incremental-search-backward

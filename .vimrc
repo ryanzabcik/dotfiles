@@ -12,7 +12,7 @@ set number
 set mouse=a
 set mousehide
 
-set hlsearch
+"set hlsearch
 set showmatch
 set incsearch
 set autoindent
