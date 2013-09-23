@@ -17,7 +17,7 @@ precmd () {
 if [[ $TERM != *256color ]]; then
     PREFIX=">"
 elif [ $EUID -eq 0 ]; then
-    PREFIX="#"
+    PREFIX="#%b"
     PCOLOR=(
         $fg_bold[red]
         $fg_bold[red]
