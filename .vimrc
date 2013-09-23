@@ -35,4 +35,6 @@ noremap ;; ;
 
 map Y "+y
 map P "+p
-nmap <Esc> :w<CR>
+nmap <C-]> :w<CR>
+imap <C-]> <Esc>:w<CR>a
+vmap <C-]> :w<CR>
