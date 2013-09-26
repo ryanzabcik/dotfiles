@@ -37,4 +37,4 @@ map Y "+y
 map P "+p
 nmap <C-]> :w<CR>
 imap <C-]> <Esc>:w<CR>a
-vmap <C-]> :w<CR>
+map :qq :q!
