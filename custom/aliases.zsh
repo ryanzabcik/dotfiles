@@ -22,7 +22,7 @@ alias sys='sudo systemctl'
 # new functions 
 alias lsmnt='mount | column -t'
 alias dl='cd /mnt/data0/Downloads'
-alias db='builtin cd /mnt/data0/Dropbox; dropbox ls'
+alias db='builtin cd /mnt/data0/Dropbox'
 alias randomport='random.org 49152 65535'
 alias yupd='yaourt -Syua --devel --noconfirm'
 alias upd='sudo pacman -Su'
