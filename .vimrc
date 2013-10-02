@@ -37,4 +37,6 @@ map Y "+y
 map P "+p
 nmap <C-]> :w<CR>
 imap <C-]> <Esc>:w<CR>a
+
+map :ww :w !sudo tee >/dev/null %
 map :qq :q!
