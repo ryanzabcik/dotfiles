@@ -5,11 +5,12 @@ function webpass {
 
     website=$1
     stty -echo
-    read -p "Password: " password
+    echo -n "Password: "
+    read password
     echo
     stty echo
 
-    echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c [:alnum:]
+    echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]'
     echo
 }
 
