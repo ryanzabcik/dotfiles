@@ -33,8 +33,9 @@ let mapleader=","
 map ; :
 noremap ;; ;
 
-map Y "+y
-map P "+p
+map <Leader>y "+y
+map <Leader>p "+p
+map <Leader>P "+P
 nmap <C-]> :w<CR>
 imap <C-]> <Esc>:w<CR>a
 
