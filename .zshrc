@@ -51,10 +51,16 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# use up and down to search history by current line
 autoload up-line-or-beginning-search
 autoload down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
+
+# use ^R to search history
 bindkey "^R" history-incremental-search-backward
+
+PATH=$PATH:.
+setopt interactivecomments # allows for using # for inline comments
