@@ -4,7 +4,7 @@ set nocompatible
 call pathogen#infect()
 call pathogen#helptags()
  
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 filetype plugin indent on
  
 set mouse=a
@@ -23,7 +23,8 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-set hidden
+set directory=/var/vim
+set timeoutlen=200 " make vim quicker to recognize ESC
 
 set background=dark
 colorscheme wombat
@@ -37,7 +38,8 @@ map <Leader>y "+y
 map <Leader>p "+p
 map <Leader>P "+P
 nmap <C-]> :w<CR>
-imap <C-]> <Esc>:w<CR>a
 
 map :ww :w !sudo tee >/dev/null %
 map :qq :q!
+
+map <C-a> ggVG
