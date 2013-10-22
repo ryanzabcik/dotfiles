@@ -45,7 +45,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cabal vi-mode dropbox ls-cd pacman-notify)
+plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,5 +62,4 @@ bindkey "^[[B" down-line-or-beginning-search
 # use ^R to search history
 bindkey "^R" history-incremental-search-backward
 
-PATH=$PATH:.
 setopt interactivecomments # allows for using # for inline comments
