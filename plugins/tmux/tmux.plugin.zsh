@@ -1,6 +1,15 @@
 # Only run if tmux is actually installed
 if which tmux &> /dev/null
 	then
+
+    # Aliases
+    alias t='tmux attach-session -t \~ || tmux attach-session || tmux new-session -s \~'
+    alias tn='tmux new-session'
+    alias ta='tmux attach-session -t'
+    alias tt='tmux new-session -t' # duplicate the session $1, sharing its windows
+    alias tl='tmux list-sessions'
+    alias th='tmux attach-session -t \~ || tmux new-session -s \~'
+
 	# Configuration variables
 	#
 	# Automatically start tmux

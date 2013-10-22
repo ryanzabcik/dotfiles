@@ -16,7 +16,6 @@ alias y='yaourt --noconfirm'
 alias p='sudo pacman --color auto'
 alias s='sudo'
 alias v='vim'
-alias t='tmux attach || tmux new'
 alias sys='sudo systemctl'
 
 # new functions 
