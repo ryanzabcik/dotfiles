@@ -14,7 +14,7 @@ precmd () {
 #    echo -n "$reset_color"
 #}
 
-if [[ $TERM != *256color ]]; then
+if [[ $TERM != *256color ]] || [ $(locale charmap) != UTF-8 ]; then
     PREFIX=">"
 elif [ $EUID -eq 0 ]; then
     PREFIX="#%b"
@@ -25,7 +25,7 @@ elif [ $EUID -eq 0 ]; then
         $fg_bold[red]
     )
 elif [[ $HOST = tachyon* ]]; then
-    PREFIX="❱"
+    PREFIX="❱" # U+2771
     PCOLOR=(
         $FG[039]
         $FG[037]
@@ -49,7 +49,16 @@ else
         $FG[147]
     )
 fi
-    
+
+# Other possible prefix characters: 
+# Gullimet           U+00BB » 
+# Sine wave          U+223F ∿ 
+# Much greater than  U+226B ≫
+# Electric arrow     U+2301 ⌁
+# Arrowhead          U+27A4 ➤
+# Bullet             U+2202 •
+# Round arrow        U+279C ➜
+
 zle_highlight=( default:bg=underline )
 PROMPT='%{$fg_bold[black]$fill%} %*
 %{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status)%{$PCOLOR[4]%} $PREFIX%f '
