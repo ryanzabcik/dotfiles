@@ -34,43 +34,8 @@ function say {
  	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null 
 }
 
-function typeout {
-    msg=$1
-    let lnstr=$(expr length "$msg")-1
-    for (( i=0; i <= $lnstr; i++ ))
-    do
-        echo -n "${msg:$i:1}"
-        sleep .1
-    done
-    echo
-}
-
 function until-success {
     $@ || until-success $@
-}
-
-function type-forever {
-    if [ "$1" == "" ]; then
-        echo "usage: type each key separated by a space, then finally an interval by which to sleep"
-    else
-        i=1
-        while true; do    
-            eval echo \${$i} # evaluates to ith argument
-            i=$(( i % $# + 1 )) # cycles like 1 2 ... N 1 2 ...
-            if [ "$i" == "$#" ]; then
-                sleep $(eval echo \${$i})
-            else
-                xdotool key $(eval echo \${$i})
-            fi
-        done
-    fi
-}
-
-function spaces-inbetween {
-    for (( i=0; i<${#1}; i++ )); do
-        echo -n "${1:$i:1} "
-    done
-    echo
 }
 
 function man {
