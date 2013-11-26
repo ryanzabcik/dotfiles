@@ -37,7 +37,9 @@ noremap ;; ;
 map <Leader>y "+y
 map <Leader>p "+p
 map <Leader>P "+P
+
 nmap <C-]> :w<CR>
+imap <C-]> <Esc>
 
 map :ww :w !sudo tee >/dev/null %
 map :qq :q!
