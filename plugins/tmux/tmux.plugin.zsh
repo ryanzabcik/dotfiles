@@ -4,7 +4,7 @@ if which tmux &> /dev/null
 
     # Aliases
     alias t='tmux attach-session -t \~ || tmux attach-session || tmux new-session -s \~'
-    alias tn='tmux new-session'
+    alias tn='tmux new-session -s'
     alias ta='tmux attach-session -t'
     alias tt='tmux new-session -t' # duplicate the session $1, sharing its windows
     alias tl='tmux list-sessions'
