@@ -32,22 +32,27 @@ elif [[ $HOST = tachyon* ]]; then
         $FG[035]
         $FG[040]
     )
-elif [[ $HOST = neutrino* ]]; then
+elif which python3 > /dev/null; then
     PREFIX="❱"
+    local code='
+import hashlib
+
+a = hashlib.md5("'"$HOST"'".encode("utf-8"))
+b = a.hexdigest()
+as_int = int(b, 16)
+print(str(as_int % 34 * 6 + 16))
+'
+    local basenum=$(echo "$code" | python3)
     PCOLOR=(
-        $FG[118]
-        $FG[120]
-        $FG[122]
-        $FG[123]
+        $FG[$(printf %03d $basenum)]
+        $FG[$(printf %03d $(( $basenum + 2)))]
+        $FG[$(printf %03d $(( $basenum + 4)))]
+        $FG[$(printf %03d $(( $basenum + 5)))]
     )
+    unset code
+    unset basenum
 else
-    PREFIX="❱"
-    PCOLOR=(
-        $FG[129]
-        $FG[135]
-        $FG[141]
-        $FG[147]
-    )
+    PREFIX=">"
 fi
 
 # Other possible prefix characters: 
