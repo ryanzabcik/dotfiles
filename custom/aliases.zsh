@@ -18,6 +18,7 @@ alias p='sudo pacman --color auto'
 alias s='sudo'
 alias v='vim'
 alias sys='sudo systemctl'
+alias net='sudo netctl'
 
 # new functions 
 alias lsmnt='mount | column -t'
