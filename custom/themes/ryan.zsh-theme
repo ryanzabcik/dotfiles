@@ -1,5 +1,3 @@
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-
 precmd () {
     let fillsize=${COLUMNS}-9
     fill=""
@@ -14,7 +12,7 @@ precmd () {
 #    echo -n "$reset_color"
 #}
 
-if [[ $TERM != *256color ]] || [ $(locale charmap) != UTF-8 ]; then
+if [[ $TERM != *256color ]] || [[ $(locale charmap) != UTF-8 ]]; then
     PREFIX=">"
 elif [ $EUID -eq 0 ]; then
     PREFIX="#%b"
@@ -45,9 +43,9 @@ print(str(as_int % 34 * 6 + 16))
     local basenum=$(echo "$code" | python3)
     PCOLOR=(
         $FG[$(printf %03d $basenum)]
-        $FG[$(printf %03d $(( $basenum + 2)))]
-        $FG[$(printf %03d $(( $basenum + 4)))]
-        $FG[$(printf %03d $(( $basenum + 5)))]
+        $FG[$(printf %03d $(( $basenum + 2 )))]
+        $FG[$(printf %03d $(( $basenum + 4 )))]
+        $FG[$(printf %03d $(( $basenum + 5 )))]
     )
     unset code
     unset basenum
@@ -56,18 +54,19 @@ else
 fi
 
 # Other possible prefix characters: 
-# Gullimet           U+00BB » 
-# Sine wave          U+223F ∿ 
-# Much greater than  U+226B ≫
+# Gullimet           U+00BB »
 # Electric arrow     U+2301 ⌁
-# Arrowhead          U+27A4 ➤
 # Bullet             U+2202 •
+# The following are wider than the fixed-width column:
+# Sine wave          U+223F ∿
+# Much greater than  U+226B ≫
+# Arrowhead          U+27A4 ➤
 # Round arrow        U+279C ➜
 
 zle_highlight=( default:bg=underline )
 PROMPT='%{$fg_bold[black]$fill%} %*
 %{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status)%{$PCOLOR[4]%} $PREFIX%f '
-RPS1="${return_code}"
+RPS1="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
