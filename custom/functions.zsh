@@ -57,14 +57,15 @@ function pwr {
         
         <command> is one of:
             [h]ibernate
-            [s]hutdown or [p]oweroff
+            [s]hutdown or [o]ff
             [r]eboot
         note that only the first letter of each command is required.
         "
         return 1
     elif [[ "$1" = h* ]]; then
+        sync
         sudo /usr/lib/systemd/systemd-sleep hibernate
-    elif [[ "$1" = s* ]] || [[ "$1" = p* ]]; then
+    elif [[ "$1" = s* ]] || [[ "$1" = o* ]]; then
         sudo systemctl poweroff
     elif [[ "$1" = r* ]]; then
         sudo systemctl reboot
