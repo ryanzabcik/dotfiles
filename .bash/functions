@@ -46,43 +46,8 @@ function say {
  	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null 
 }
 
-function typeout {
-    msg=$1
-    let lnstr=$(expr length "$msg")-1
-    for (( i=0; i <= $lnstr; i++ ))
-    do
-        echo -n "${msg:$i:1}"
-        sleep .1
-    done
-    echo
-}
-
 function until-success {
     $@ || until-success $@
-}
-
-function type-forever {
-    if [ "$1" == "" ]; then
-        echo "usage: type each key separated by a space, then finally an interval by which to sleep"
-    else
-        i=1
-        while true; do    
-            eval echo \${$i} # evaluates to ith argument
-            i=$(( i % $# + 1 )) # cycles like 1 2 ... N 1 2 ...
-            if [ "$i" == "$#" ]; then
-                sleep $(eval echo \${$i})
-            else
-                xdotool key $(eval echo \${$i})
-            fi
-        done
-    fi
-}
-
-function spaces-inbetween {
-    for (( i=0; i<${#1}; i++ )); do
-        echo -n "${1:$i:1} "
-    done
-    echo
 }
 
 function man {
@@ -94,4 +59,30 @@ function man {
 	LESS_TERMCAP_ue=$(printf "\e[0m") \
 	LESS_TERMCAP_us=$(printf "\e[1;32m") \
 	man "$@";
+}
+
+function pwr {
+    if [ -z "$@" ]; then
+        echo "
+        pwr is a short function for controlling the system power.
+        usage: pwr <command>
+        
+        <command> is one of:
+            [h]ibernate
+            [s]hutdown or [o]ff
+            [r]eboot
+        note that only the first letter of each command is required.
+        "
+        return 1
+    elif [[ "$1" = h* ]]; then
+        sync
+        sudo /usr/lib/systemd/systemd-sleep hibernate
+    elif [[ "$1" = s* ]] || [[ "$1" = o* ]]; then
+        sudo systemctl poweroff
+    elif [[ "$1" = r* ]]; then
+        sudo systemctl reboot
+    else
+        echo "could not parse argument. run the command without any arguments for usage instructions."
+        return 2
+    fi
 }
