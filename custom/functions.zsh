@@ -31,7 +31,7 @@ function say {
 		else local lang=${LANG%_*} 
 			local text="$*"
 	fi
- 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null 
+ 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" #&> /dev/null 
 }
 
 function until-success {
