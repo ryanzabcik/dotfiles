@@ -1,9 +1,12 @@
+#local linechar="-"
+local linechar="─"
+
 precmd () {
     let fillsize=${COLUMNS}-9
     fill=""
     while [ "$fillsize" -gt "0" ]
     do
-        fill="-${fill}" # fill with underscores to work on 
+        fill="$linechar${fill}" # fill with underscores to work on 
         let fillsize=${fillsize}-1
     done
 }
