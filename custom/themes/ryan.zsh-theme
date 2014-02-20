@@ -67,9 +67,9 @@ fi
 # Round arrow        U+279C ➜
 
 zle_highlight=( default:bg=underline )
+
 PROMPT='%{$fg_bold[black]$fill%} %*
-%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status)%{$PCOLOR[4]%} $PREFIX%f '
-RPS1="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PREFIX %f'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
