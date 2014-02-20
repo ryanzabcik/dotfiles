@@ -28,6 +28,7 @@ set timeoutlen=200 " make vim quicker to recognize ESC
 
 set background=dark
 colorscheme wombat
+set listchars=trail:~,tab:→\ ,eol:¬
 
 let mapleader=","
 
