@@ -47,6 +47,8 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump tmux)
 
+export PATH=$PATH:$HOME/code/go/bin:$HOME/scripts
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -66,4 +68,3 @@ setopt interactivecomments # allows for using # for inline comments
 
 # /dev/null is too useful to be this long, so a ? in a token by itself will expand to it
 alias -g \?=/dev/null
-
