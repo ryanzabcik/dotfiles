@@ -37,12 +37,12 @@ if [[ $TERM = *256color ]]; then
         )
     elif which python3 > /dev/null; then
         local code='
-    import hashlib
+import hashlib
 
-    a = hashlib.md5("'"$HOST"'".encode("utf-8"))
-    b = a.hexdigest()
-    as_int = int(b, 16)
-    print(str(as_int % 34 * 6 + 16))
+a = hashlib.md5("'"$HOST"'".encode("utf-8"))
+b = a.hexdigest()
+as_int = int(b, 16)
+print(str(as_int % 34 * 6 + 16))
     '
         local basenum=$(echo "$code" | python3)
         PCOLOR=(
