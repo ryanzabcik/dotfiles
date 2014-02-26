@@ -127,14 +127,18 @@ compdef ggpush=git
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 compdef ggpnp=git
 
-# Pretty log messages
-function _git_log_prettily(){
-  if ! [ -z $1 ]; then
-    git log --pretty=$1
-  fi
-}
-alias glp="_git_log_prettily"
-compdef _git glp=git-log
+# -- this does not seem to work
+#Pretty log messages
+#function _git_log_prettily(){
+  #if ! [ -z $1 ]; then
+    #git log --pretty=$1
+  #fi
+#}
+#alias glp="_git_log_prettily"
+#compdef _git glp=git-log
+
+alias glp="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+compdef glp=git
 
 # Work In Progress (wip)
 # These features allow to pause a branch development and switch to another one (wip)
