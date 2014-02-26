@@ -47,9 +47,8 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump)
 
-export PATH=$PATH:$HOME/code/go/bin:$HOME/scripts
-
 source $ZSH/oh-my-zsh.sh
+source $HOME/.profile
 
 # Customize to your needs...
 
