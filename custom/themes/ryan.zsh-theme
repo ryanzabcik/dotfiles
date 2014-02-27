@@ -17,7 +17,7 @@ else
 fi
 
 if [ $EUID -eq 0 ]; then
-    PREFIX="#"
+    PREFIX="#%b"
 fi
 
 if [[ $TERM = *256color ]]; then
