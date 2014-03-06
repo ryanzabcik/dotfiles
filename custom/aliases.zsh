@@ -39,3 +39,8 @@ alias backup='sudo rsync -aPAX --delete --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,
 # error-correcting
 alias :q='exit'
 alias :wq='exit'
+
+# global aliases
+alias -g @tachyon=ryan@tachyon.zabcik.com
+alias -g @pez=ryanz@pez.cs.utexas.edu
+alias -g @hadron=ryan@hadron.zabcik.com
