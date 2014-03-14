@@ -44,3 +44,4 @@ alias :wq='exit'
 alias -g @tachyon=ryan@tachyon.zabcik.com
 alias -g @pez=ryanz@pez.cs.utexas.edu
 alias -g @hadron=ryan@hadron.zabcik.com
+alias -g @nfs=rzabcik_zabcik@ssh.phx.nearlyfreespeech.net
