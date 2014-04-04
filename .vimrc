@@ -23,7 +23,17 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-set directory=/var/vim
+if filewritable("/var/vim")
+	set directory=/var/vim
+else
+	let choice = confirm("/var/vim does not exist; use which directory?", "&.\n&/tmp", 1) 
+    if choice == 1
+        set directory=.
+    elseif choice == 2
+        set directory=/tmp
+    endif
+endif
+
 set timeoutlen=200 " make vim quicker to recognize ESC
 
 set background=dark
