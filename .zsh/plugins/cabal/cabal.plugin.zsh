@@ -34,5 +34,3 @@ function _cabal_commands() {
 }
 
 compdef _cabal_commands cabal
-
-export PATH=$PATH:/home/$USER/.cabal/bin
