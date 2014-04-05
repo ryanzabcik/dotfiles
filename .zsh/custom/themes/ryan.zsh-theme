@@ -66,8 +66,6 @@ fi
 # Arrowhead          U+27A4 ➤
 # Round arrow        U+279C ➜
 
-zle_highlight=( default:bg=underline )
-
 PROMPT='%{$fg_bold[black]$FILL%} %*
 %{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PREFIX %f'
 
@@ -75,4 +73,3 @@ ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_DROPBOX_PROMPT_PREFIX=" ("
 ZSH_THEME_DROPBOX_PROMPT_SUFFIX=")"
-
