@@ -57,6 +57,4 @@ nmap <C-]> :w<CR>
 imap <C-]> <Esc>
 
 cnoremap :sudow :w !sudo tee % >/dev/null
-map :qq :q!
-
-"map <C-a> ggVG
+cnoremap :qq :q!
