@@ -10,7 +10,7 @@ filetype plugin indent on
 set mouse=a
 set mousehide
 
-"set hlsearch
+set hlsearch
 syntax on
 set showmatch
 set number
