@@ -44,8 +44,10 @@ set listchars=trail:~,tab:→\ ,eol:¬
 
 let mapleader=","
 
-map ; :
-noremap ;; ;
+"map ; :
+"noremap ;; ;
+map ;q :q
+map ;wq :wq
 
 map <Leader>y "+y
 map <Leader>p "+p
