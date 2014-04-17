@@ -47,6 +47,7 @@ let mapleader=","
 "map ; :
 "noremap ;; ;
 map ;q :q
+map ;qq :q!
 map ;wq :wq
 
 map <Leader>y "+y
