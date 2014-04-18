@@ -57,5 +57,5 @@ map <Leader>P "+P
 nmap <C-]> :w<CR>
 imap <C-]> <Esc>
 
-cnoremap :sudow :w !sudo tee % >/dev/null
-cnoremap :qq :q!
+command Sudow :w !sudo tee % >/dev/null
+cabbrev qq q!
