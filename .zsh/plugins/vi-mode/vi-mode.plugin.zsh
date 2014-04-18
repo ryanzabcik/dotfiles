@@ -33,3 +33,18 @@ function vi_mode_prompt_info() {
 if [[ "$RPS1" == "" && "$RPROMPT" == "" ]]; then
   RPS1='$(vi_mode_prompt_info)'
 fi
+
+function yank-line {
+    YANK="$BUFFER"
+    BUFFER=""
+}
+zle -N yank-line
+bindkey "^U" yank-line
+
+function restore-line {
+    BUFFER="$YANK"
+    YANK=""
+    zle end-of-line
+}
+zle -N restore-line
+bindkey "^Y" restore-line
