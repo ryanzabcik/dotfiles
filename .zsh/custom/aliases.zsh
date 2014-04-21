@@ -37,6 +37,7 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias pez='ssh ryanz@pez.cs.utexas.edu'
 alias nfs='ssh rzabcik_zabcik@ssh.phx.nearlyfreespeech.net'
 alias findn='noglob find . -name'
+alias incognito='HISTFILE=/dev/null zsh'
 
 # error-correcting
 alias :q='exit'
