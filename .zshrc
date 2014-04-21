@@ -64,6 +64,7 @@ bindkey "^[[B" down-line-or-beginning-search
 bindkey "^R" history-incremental-search-backward
 
 setopt interactivecomments # allows for using # for inline comments
+setopt noclobber # don't overwrite files with > Instead use >! or >>
 
 # /dev/null is too useful to be this long, so a ? in a token by itself will expand to it
 alias -g \?=/dev/null
