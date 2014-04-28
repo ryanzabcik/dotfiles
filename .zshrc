@@ -45,7 +45,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump)
+plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump control-keys)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
