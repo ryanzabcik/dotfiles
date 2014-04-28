@@ -41,8 +41,10 @@ if [[ "$RPS1" == "" && "$RPROMPT" == "" ]]; then
 fi
 
 function yank-line {
-    YANK="$BUFFER"
-    BUFFER=""
+    if [ "$BUFFER" ]; then
+        YANK="$BUFFER"
+        BUFFER=""
+    fi
 }
 zle -N yank-line
 bindkey "^U" yank-line
