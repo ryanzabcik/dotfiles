@@ -10,7 +10,7 @@ filetype plugin indent on
 set mouse=a
 set mousehide
 
-"set hlsearch
+set hlsearch
 syntax on
 set showmatch
 set number
@@ -25,12 +25,17 @@ set softtabstop=4
 
 if filewritable("/var/vim")
 	set directory=/var/vim
+elseif filewritable("~/.cache/vim")
+    set directory=~/.cache/vim
 else
-	let choice = confirm("/var/vim does not exist; use which directory?", "&.\n&/tmp", 1) 
+	let choice = confirm("Neither the /var/vim nor the ~/.cache/vim directories exist; use which directory?", "&.\n&/tmp\n&Create the ~/.cache/vim directory", 1) 
     if choice == 1
         set directory=.
     elseif choice == 2
         set directory=/tmp
+    elseif choice == 3
+        call mkdir("~/.cache/vim", "p")
+        set directory=~/.cache/vim
     endif
 endif
 
@@ -38,23 +43,30 @@ set ttimeoutlen=200 " make vim quicker to recognize ESC
 
 set background=dark
 colorscheme wombat
-set guifont=Droid\ Sans\ Mono\ Slashed\ 11 
+if has("gui_macvim")
+    set guifont=Droid\ Sans\ Mono\ Slashed:h14
+else
+    set guifont=Droid\ Sans\ Mono\ Slashed\ 14
+endif
 set guioptions-=T
 set listchars=trail:~,tab:→\ ,eol:¬
 
 let mapleader=","
 
-map ; :
-noremap ;; ;
+"map ; :
+"noremap ;; ;
+map ;q :q
+map ;qq :q!
+map ;wq :wq
 
 map <Leader>y "+y
 map <Leader>p "+p
 map <Leader>P "+P
 
+map <Leader>t :TagbarToggle<CR>
+
 nmap <C-]> :w<CR>
 imap <C-]> <Esc>
 
-cnoremap :sudow :w !sudo tee % >/dev/null
-map :qq :q!
-
-"map <C-a> ggVG
+command Sudow :w !sudo tee % >/dev/null
+cabbrev qq q!

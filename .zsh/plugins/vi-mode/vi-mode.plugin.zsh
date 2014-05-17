@@ -17,8 +17,14 @@ function zle-keymap-select zle-line-init zle-line-finish {
 zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
+zle -N edit-command-line
+
 
 bindkey -v
+
+# allow v to edit the command line (standard behaviour)
+autoload -Uz edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
 # if mode indicator wasn't setup by theme, define default
 if [[ "$MODE_INDICATOR" == "" ]]; then
@@ -33,3 +39,20 @@ function vi_mode_prompt_info() {
 if [[ "$RPS1" == "" && "$RPROMPT" == "" ]]; then
   RPS1='$(vi_mode_prompt_info)'
 fi
+
+function yank-line {
+    if [ "$BUFFER" ]; then
+        YANK="$BUFFER"
+        BUFFER=""
+    fi
+}
+zle -N yank-line
+bindkey "^U" yank-line
+
+function restore-line {
+    BUFFER="$YANK"
+    YANK=""
+    zle end-of-line
+}
+zle -N restore-line
+bindkey "^Y" restore-line

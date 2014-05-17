@@ -45,7 +45,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump)
+plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump control-keys)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
@@ -64,6 +64,7 @@ bindkey "^[[B" down-line-or-beginning-search
 bindkey "^R" history-incremental-search-backward
 
 setopt interactivecomments # allows for using # for inline comments
+setopt noclobber # don't overwrite files with > Instead use >! or >>
 
 # /dev/null is too useful to be this long, so a ? in a token by itself will expand to it
 alias -g \?=/dev/null

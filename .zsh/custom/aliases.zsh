@@ -6,6 +6,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias pgrep='pgrep -l'
 alias xclip='env DISPLAY=:0 xclip'
+alias du='du -h'
+alias df='df -h'
 
 # short
 alias l='env LC_ALL=C ls -lAXvhk --group-directories-first --color=auto'
@@ -35,6 +37,7 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias pez='ssh ryanz@pez.cs.utexas.edu'
 alias nfs='ssh rzabcik_zabcik@ssh.phx.nearlyfreespeech.net'
 alias findn='noglob find . -name'
+alias incognito='HISTFILE=/dev/null zsh'
 
 # error-correcting
 alias :q='exit'

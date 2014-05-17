@@ -11,9 +11,11 @@ precmd () {
 if [[ $(locale charmap) != UTF-8 ]] || [ "$TERM" = linux ]; then
     PREFIX=">"
     LINECHAR="-"
+    LCOLOR=""
 else
     PREFIX="❱" # U+2771
     LINECHAR="─"
+    LCOLOR="$fg_bold[black]"
 fi
 
 if [ $EUID -eq 0 ]; then
@@ -66,10 +68,11 @@ fi
 # Arrowhead          U+27A4 ➤
 # Round arrow        U+279C ➜
 
-PROMPT='%{$fg_bold[black]$FILL%} %*
+PROMPT='%{$LCOLOR$FILL%} %*
 %{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PREFIX %f'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+ZSH_THEME_GIT_PROMPT_STASHED="^"
 ZSH_THEME_DROPBOX_PROMPT_PREFIX=" ("
 ZSH_THEME_DROPBOX_PROMPT_SUFFIX=")"
