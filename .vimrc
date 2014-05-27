@@ -39,7 +39,7 @@ else
     endif
 endif
 
-set timeoutlen=200 " make vim quicker to recognize ESC
+set ttimeoutlen=200 " make vim quicker to recognize ESC
 
 set background=dark
 colorscheme wombat
