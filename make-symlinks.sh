@@ -1,10 +1,16 @@
-rm .bashrc
-ln -s git/dotfiles/.bash
-ln -s git/dotfiles/.bashrc
-ln -s git/dotfiles/.zsh
-ln -s git/dotfiles/.zshrc
-ln -s git/dotfiles/.vim
-ln -s git/dotfiles/.vimrc
-ln -s git/dotfiles/.vimcrypt
-ln -s git/dotfiles/.tmux.conf
-ln -s git/dotfiles/.profile
+if [ ! $1 ]; then
+    echo no directory provided, using git/dotfiles
+    dir=git/dotfiles
+else
+    dir=$1
+fi
+
+ln -s $dir/.bash
+ln -s $dir/.bashrc
+ln -s $dir/.zsh
+ln -s $dir/.zshrc
+ln -s $dir/.vim
+ln -s $dir/.vimrc
+ln -s $dir/.vimcrypt
+ln -s $dir/.tmux.conf
+ln -s $dir/.profile
