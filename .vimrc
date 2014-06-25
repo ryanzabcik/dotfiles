@@ -72,3 +72,6 @@ command Sudow :w !sudo tee % >/dev/null
 cabbrev qq q!
 
 nnoremap gp `[v`]
+
+nnoremap <Leader>{ :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+nnoremap <Leader>} :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
