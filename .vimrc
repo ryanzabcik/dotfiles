@@ -70,3 +70,5 @@ imap <C-]> <Esc>
 
 command Sudow :w !sudo tee % >/dev/null
 cabbrev qq q!
+
+nnoremap gp `[v`]
