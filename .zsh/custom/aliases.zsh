@@ -22,22 +22,21 @@ alias s='sudo'
 alias v='vim'
 alias sys='sudo systemctl'
 alias net='sudo netctl'
-
-# new functions 
-alias lsmnt='mount | column -t'
 alias dl='cd /mnt/data0/Downloads'
 alias db='cd /mnt/data0/Dropbox'
 alias dt='cd /mnt/data0'
+
+# new functions 
+alias lsmnt='mount | column -t'
 alias yupd='yaourt -Syua --devel --noconfirm'
-alias upd='if [ "$(date +%u)" = 1 ]; then yaourt -Syua; sudo abs; else sudo pacman -Su; fi'
+alias upd='if [ "$(date +%u)" = 1 ]; then yaourt -Syua --devel; sudo abs; else sudo pacman -Su; fi'
 alias vimcrypt='vim -u ~/.vimcrypt -x'
-alias nettest='ping -c 5 utexas.edu && curl http://speedtest.dallas.linode.com/100MB-dallas.bin -m 10 > /dev/null'
+alias nettest='ping -c 5 utexas.edu && curl http://speedtest.dallas.linode.com/100MB-dallas.bin -m 5 > /dev/null'
 alias netstop='sudo netctl stop-all'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias pez='ssh ryanz@pez.cs.utexas.edu'
-alias nfs='ssh rzabcik_zabcik@ssh.phx.nearlyfreespeech.net'
 alias findn='noglob find . -name'
 alias incognito='HISTFILE=/dev/null zsh'
+alias pfind='(){ pacman -Ss $1 || yaourt -Ss $1 }'
 
 # error-correcting
 alias :q='exit'
