@@ -51,13 +51,13 @@ endif
 set guioptions-=T
 set listchars=trail:~,tab:→\ ,eol:¬
 
-let mapleader=","
+let mapleader=" "
 
 "map ; :
 "noremap ;; ;
-map ;q :q
-map ;qq :q!
-map ;wq :wq
+"map ;q :q
+"map ;qq :q!
+"map ;wq :wq
 
 map <Leader>y "+y
 map <Leader>p "+p
