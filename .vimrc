@@ -25,8 +25,8 @@ set softtabstop=4
 
 if filewritable("/var/vim")
 	set directory=/var/vim
-elseif filewritable("~/.cache/vim")
-    set directory=~/.cache/vim
+elseif filewritable("$HOME/.cache/vim")
+    set directory=$HOME/.cache/vim
 else
 	let choice = confirm("Neither the /var/vim nor the ~/.cache/vim directories exist; use which directory?", "&.\n&/tmp\n&Create the ~/.cache/vim directory", 1) 
     if choice == 1
@@ -34,8 +34,8 @@ else
     elseif choice == 2
         set directory=/tmp
     elseif choice == 3
-        call mkdir("~/.cache/vim", "p")
-        set directory=~/.cache/vim
+        call mkdir("$HOME/.cache/vim", "p")
+        set directory=$HOME/.cache/vim
     endif
 endif
 
