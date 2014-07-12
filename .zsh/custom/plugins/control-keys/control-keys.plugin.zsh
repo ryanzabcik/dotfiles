@@ -22,4 +22,4 @@ zle -N prepend-editor
 bindkey "^E" prepend-editor
 
 # leftover key sequences:
-# ^T ^Y ^P ^S ^F ^K ^A ^Z ^X ^B ^N
+# ^T ^P ^S ^F ^K ^A ^Z ^X ^B ^N
