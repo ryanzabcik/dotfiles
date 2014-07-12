@@ -3,9 +3,18 @@ source "$dir/kernel-updates.zsh"
 source "$dir/package-updates.zsh"
 
 # Use this function to quell notifications until next boot or 24 hours.
+# If a second argument is given, interpret as time from now
 function okay {
     touch /tmp/okay-pacman-notify
-    which at && at now + 24 hours <<<"rm /tmp/okay-pacman-notify"
+    if which at; then
+        if [ "$*" ]; then
+            at now + "$*" <<<"rm /tmp/okay-pacman-notify"
+        else
+            at now + 24 hours <<<"rm /tmp/okay-pacman-notify"
+        fi
+    else
+        exit 1
+    fi
     clear
 }
 
