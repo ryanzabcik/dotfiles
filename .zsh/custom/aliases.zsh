@@ -36,6 +36,7 @@ alias netstop='sudo netctl stop-all'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias findn='noglob find . -name'
 alias incognito='HISTFILE=/dev/null zsh'
+alias mcd='(){ md $1; cd $1 }'
 
 # error-correcting
 alias :q='exit'
