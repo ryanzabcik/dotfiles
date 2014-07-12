@@ -36,7 +36,6 @@ alias netstop='sudo netctl stop-all'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias findn='noglob find . -name'
 alias incognito='HISTFILE=/dev/null zsh'
-alias pfind='(){ pacman -Ss $1 || yaourt -Ss $1 }'
 
 # error-correcting
 alias :q='exit'
