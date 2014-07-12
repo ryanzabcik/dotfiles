@@ -56,3 +56,7 @@ function restore-line {
 }
 zle -N restore-line
 bindkey "^Y" restore-line
+
+bindkey $terminfo[khome] vi-beginning-of-line
+bindkey $terminfo[kend]  vi-end-of-line
+bindkey $terminfo[kdch1] vi-delete-char
