@@ -5,7 +5,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias pgrep='pgrep -l'
-alias xclip='env DISPLAY=:0 xclip'
+alias xclip='xclip -display :0'
 alias du='du -h'
 alias df='df -h'
 
