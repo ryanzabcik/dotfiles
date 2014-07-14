@@ -6,12 +6,6 @@ alias po='popd'
 alias ...='cd ../..'
 alias -- -='cd -'
 
-# Super user
-alias _='sudo'
-alias please='sudo'
-
-#alias g='grep -in'
-
 # Show history
 if [ "$HIST_STAMPS" = "mm/dd/yyyy" ]
 then
@@ -26,11 +20,5 @@ else
     alias history='fc -l 1'
 fi
 # List direcory contents
-alias lsa='ls -lah'
-alias l='ls -la'
 alias ll='ls -l'
 alias la='ls -lA'
-alias sl=ls # often screw this up
-
-alias afind='ack-grep -il'
-
