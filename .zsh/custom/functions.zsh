@@ -1,17 +1,19 @@
 # webpass command: generates a password for every website
 
 function webpass {
-    #usage: webpass <website>
+    #usage: webpass [-c] <website>
 
     website=$1
     stty -echo
-    echo -n "Password: "
+    echo -n "Password: " >&2
     read password
-    echo
+    echo >&2
+    echo -n "Confirm Password: " >&2
+    read confirm
     stty echo
-
+    [ "$password" = "$confirm" ] || exit 1
     echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]'
-    echo
+    echo >&2
 }
 
 function random.org {
