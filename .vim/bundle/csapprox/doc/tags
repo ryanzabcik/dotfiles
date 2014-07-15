@@ -9,6 +9,7 @@ csapprox-changelog	CSApprox.txt	/*csapprox-changelog*
 csapprox-configure	CSApprox.txt	/*csapprox-configure*
 csapprox-design	CSApprox.txt	/*csapprox-design*
 csapprox-eterm	CSApprox.txt	/*csapprox-eterm*
+csapprox-fbterm	CSApprox.txt	/*csapprox-fbterm*
 csapprox-gnome-terminal	CSApprox.txt	/*csapprox-gnome-terminal*
 csapprox-gui-support	CSApprox.txt	/*csapprox-gui-support*
 csapprox-hooks	CSApprox.txt	/*csapprox-hooks*
