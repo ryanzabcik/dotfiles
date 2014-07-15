@@ -5,7 +5,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias pgrep='pgrep -l'
-alias xclip='env DISPLAY=:0 xclip'
+alias xclip='xclip -display :0'
 alias du='du -h'
 alias df='df -h'
 
@@ -25,6 +25,7 @@ alias net='sudo netctl'
 alias dl='cd /mnt/data0/Downloads'
 alias db='cd /mnt/data0/Dropbox'
 alias dt='cd /mnt/data0'
+alias cb='xclip -selection clipboard'
 
 # new functions 
 alias lsmnt='mount | column -t'
