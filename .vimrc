@@ -76,3 +76,6 @@ nnoremap gp `[v`]
 
 nnoremap <Leader>{ :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
 nnoremap <Leader>} :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
+
+map zx :wq<CR>
+map zq :q<CR>
