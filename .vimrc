@@ -68,6 +68,7 @@ map <Leader>t :TagbarToggle<CR>
 
 nmap + :tabedit<CR>
 
+nnoremap <C-T> <C-]>
 nmap <C-]> :w<CR>
 imap <C-]> <Esc>
 
