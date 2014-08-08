@@ -8,7 +8,7 @@ function git_prompt_info() {
 }
 
 parse_git_stash() {
-    if [ "$(git stash list)" ]; then
+    if [[ ! "$PWD" =~ .git ]] && [ "$(git stash list)" ]; then
         echo "$ZSH_THEME_GIT_PROMPT_STASHED"
     fi
 }
