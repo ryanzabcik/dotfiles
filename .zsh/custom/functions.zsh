@@ -3,16 +3,27 @@
 function webpass {
     #usage: webpass [-c] <website>
 
-    website=$1
+    if [ "$1" = '-c' ]; then
+        website=$2
+        clipboard=yes
+    else
+        website=$1
+    fi
     stty -echo
     echo -n "Password: " >&2
     read password
     echo >&2
     echo -n "Confirm Password: " >&2
     read confirm
+    echo >&2
     stty echo
-    [ "$password" = "$confirm" ] || exit 1
-    echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]'
+    [ "$password" = "$confirm" ] || { echo 'Passwords do not match.'; return 1 }
+    if [ "$clipboard" ]; then
+        echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]' | xclip -selection clipboard -i
+        echo -n Copied to clipboard.
+    else
+        echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]'
+    fi
     echo >&2
 }
 
