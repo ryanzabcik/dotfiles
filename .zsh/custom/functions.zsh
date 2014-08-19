@@ -59,7 +59,7 @@ function man {
 	LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
 	LESS_TERMCAP_ue=$(printf "\e[0m") \
 	LESS_TERMCAP_us=$(printf "\e[1;32m") \
-	man "$@" || $@ --help;
+	man "$@" || { if which $@; then $@ --help; fi }
 }
 
 function pwr {
