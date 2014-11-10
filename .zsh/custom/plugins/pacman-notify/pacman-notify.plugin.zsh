@@ -1,6 +1,5 @@
-local dir=$(dirname $0)
-source "$dir/kernel-updates.zsh"
-source "$dir/package-updates.zsh"
+source "$(dirname $0)/kernel-updates.zsh"
+source "$(dirname $0)/package-updates.zsh"
 
 # Use this function to quell notifications until next boot or 24 hours.
 # If a second argument is given, interpret as time from now

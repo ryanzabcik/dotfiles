@@ -4,10 +4,10 @@ function webpass {
     #usage: webpass [-c] <website>
 
     if [ "$1" = '-c' ]; then
-        website=$2
-        clipboard=yes
+        local website=$2
+        local clipboard=yes
     else
-        website=$1
+        local website=$1
     fi
     stty -echo
     echo -n "Password: " >&2
@@ -63,17 +63,9 @@ function man {
 }
 
 function pwr {
+    local usage="pwr is a short function for controlling the system power.\nusage: pwr <command>\n\n<command> is one of:\n\t[h]ibernate\n\t[s]hutdown or [o]ff\n\t[r]eboot\n\nnote that only the first letter of each command is required."
     if [ -z "$@" ]; then
-        echo "
-        pwr is a short function for controlling the system power.
-        usage: pwr <command>
-        
-        <command> is one of:
-            [h]ibernate
-            [s]hutdown or [o]ff
-            [r]eboot
-        note that only the first letter of each command is required.
-        "
+        echo $usage
         return 1
     elif [[ "$1" = h* ]]; then
         sync
@@ -83,7 +75,7 @@ function pwr {
     elif [[ "$1" = r* ]]; then
         sudo systemctl reboot
     else
-        echo "could not parse argument. run the command without any arguments for usage instructions."
+        echo "could not parse argument. $usage"
         return 2
     fi
 }
