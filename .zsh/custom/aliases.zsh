@@ -26,6 +26,7 @@ alias net='sudo netctl'
 alias dl='cd /mnt/data0/Downloads'
 alias db='cd /mnt/data0/Dropbox'
 alias dt='cd /mnt/data0'
+alias ex='vim -e'
 alias cb='xclip -selection clipboard'
 alias can='trash-put'
 
