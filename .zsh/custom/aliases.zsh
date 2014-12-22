@@ -8,6 +8,7 @@ alias pgrep='pgrep -l'
 alias xclip='xclip -display :0'
 alias du='du -h'
 alias df='df -h'
+alias dropbox="DISPLAY=:0 dropbox"
 
 # short
 alias l='env LC_ALL=C ls -lAXvhk --group-directories-first --color=auto'
