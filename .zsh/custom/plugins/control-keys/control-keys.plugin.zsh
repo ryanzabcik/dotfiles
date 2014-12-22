@@ -21,5 +21,12 @@ function prepend-editor {
 zle -N prepend-editor
 bindkey "^E" prepend-editor
 
+function __ranger {
+    BUFFER=ranger
+    zle accept-line
+}
+zle -N __ranger
+bindkey "^N" __ranger # mnemonic: Navigate
+
 # leftover key sequences:
 # ^T ^P ^S ^F ^K ^A ^Z ^X ^B ^N
