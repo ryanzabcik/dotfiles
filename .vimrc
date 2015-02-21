@@ -83,3 +83,17 @@ nnoremap <Leader>} :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' .
 
 map zx :wq<CR>
 map zq :q<CR>
+
+map <Right> gt
+map <Left> gT
+map <Up> :bprev<CR>
+map <Down> :bnext<CR>
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|o)$',
+  \ }
+
+vmap <Leader>= :'<,'>Tabularize /=<CR>
+vnoremap <Leader>w :'<,'>w !wc -w<CR>
+noremap <Leader>w :%w !wc -w<CR>
