@@ -27,8 +27,8 @@ function webpass {
     echo >&2
 }
 
-function pacsize {
-     pacman -Qi $(pacman -Qq) | grep 'Name\|Size' | cut -d: -f2 | paste - - | column -t | sort -nk2
+function random.org {
+    curl "http://www.random.org/integers/?num=1&min=""$1""&max=""$2""&col=1&base=10&format=plain&rnd=new"
 }
 
 # usage: plays back a text-to-speech recording of the argument(s)
@@ -56,24 +56,6 @@ function man {
 	LESS_TERMCAP_ue=$(printf "\e[0m") \
 	LESS_TERMCAP_us=$(printf "\e[1;32m") \
 	man "$@" || { if which $@; then $@ --help; fi }
-}
-
-function pwr {
-    local usage="pwr is a short function for controlling the system power.\nusage: pwr <command>\n\n<command> is one of:\n\t[h]ibernate\n\t[s]hutdown or [o]ff\n\t[r]eboot\n\nnote that only the first letter of each command is required."
-    if [ -z "$@" ]; then
-        echo $usage
-        return 1
-    elif [[ "$1" = h* ]]; then
-        sync
-        sudo /usr/lib/systemd/systemd-sleep hibernate
-    elif [[ "$1" = s* ]] || [[ "$1" = o* ]]; then
-        sudo systemctl poweroff
-    elif [[ "$1" = r* ]]; then
-        sudo systemctl reboot
-    else
-        echo "could not parse argument. $usage"
-        return 2
-    fi
 }
 
 function sudo-accept-line {
