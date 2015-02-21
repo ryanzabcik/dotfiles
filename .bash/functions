@@ -36,14 +36,14 @@ function pacsize {
 
 # usage: plays back a text-to-speech recording of the argument(s)
 
-function say { 
+function say {
 	if [[ "${1}" =~ -[a-z]{2} ]]
-		then local lang=${1#-} 
-			local text="${*#$1}" 
-		else local lang=${LANG%_*} 
+		then local lang=${1#-}
+			local text="${*#$1}"
+		else local lang=${LANG%_*}
 			local text="$*"
 	fi
- 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null 
+ 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" &> /dev/null
 }
 
 function until-success {
@@ -66,7 +66,7 @@ function pwr {
         echo "
         pwr is a short function for controlling the system power.
         usage: pwr <command>
-        
+
         <command> is one of:
             [h]ibernate
             [s]hutdown or [o]ff

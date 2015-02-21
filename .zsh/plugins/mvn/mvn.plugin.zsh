@@ -20,7 +20,7 @@ export BACKGROUND_CYAN=`tput setab 6`
 export BACKGROUND_WHITE=`tput setab 7`
 export RESET_FORMATTING=`tput sgr0`
 
- 
+
 # Wrapper function for Maven's mvn command.
 mvn-color()
 {
@@ -32,12 +32,12 @@ mvn-color()
                -e "s/\(\[WARNING\]\)\(.*\)/${BOLD}${TEXT_YELLOW}\1${RESET_FORMATTING}\2/g" \
                -e "s/\(\[ERROR\]\)\(.*\)/${BOLD}${TEXT_RED}\1${RESET_FORMATTING}\2/g" \
                -e "s/Tests run: \([^,]*\), Failures: \([^,]*\), Errors: \([^,]*\), Skipped: \([^,]*\)/${BOLD}${TEXT_GREEN}Tests run: \1${RESET_FORMATTING}, Failures: ${BOLD}${TEXT_RED}\2${RESET_FORMATTING}, Errors: ${BOLD}${TEXT_RED}\3${RESET_FORMATTING}, Skipped: ${BOLD}${TEXT_YELLOW}\4${RESET_FORMATTING}/g"
- 
+
   # Make sure formatting is reset
   echo -ne ${RESET_FORMATTING}
   )
 }
- 
+
 # Override the mvn command with the colorized one.
 #alias mvn="mvn-color"
 
@@ -53,19 +53,19 @@ alias mvncom='mvn compile'
 alias mvnt='mvn test'
 alias mvnag='mvn archetype:generate'
 alias mvn-updates='mvn versions:display-dependency-updates'
-alias mvntc7='mvn tomcat7:run' 
+alias mvntc7='mvn tomcat7:run'
 alias mvntc='mvn tomcat:run'
 alias mvnjetty='mvn jetty:run'
 
 
-function listMavenCompletions { 
+function listMavenCompletions {
      reply=(
         # common lifecycle
         clean process-resources compile process-test-resources test-compile test package verify install deploy site
-        
+
         # common plugins
         deploy failsafe install site surefire checkstyle javadoc jxr pmd ant antrun archetype assembly dependency enforcer gpg help release repository source eclipse idea jetty cargo jboss tomcat tomcat6 tomcat7 exec versions war ear ejb android scm buildnumber nexus repository sonar license hibernate3 liquibase flyway gwt
-       
+
         # deploy
         deploy:deploy-file
         # failsafe
@@ -76,7 +76,7 @@ function listMavenCompletions {
         site:site site:deploy site:run site:stage site:stage-deploy
         # surefire
         surefire:test
-            
+
         # checkstyle
         checkstyle:checkstyle checkstyle:check
         # javadoc
@@ -108,12 +108,12 @@ function listMavenCompletions {
         repository:bundle-create repository:bundle-pack
         # source
         source:aggregate source:jar source:jar-no-fork
-            
+
         # eclipse
         eclipse:clean eclipse:eclipse
         # idea
         idea:clean idea:idea
-            
+
         # jetty
         jetty:run jetty:run-exploded
         # cargo
@@ -167,11 +167,11 @@ function listMavenCompletions {
         # arguments
         -am -amd -B -C -c -cpu -D -e -emp -ep -f -fae -ff -fn -gs -h -l -N -npr -npu -nsu -o -P -pl -q -rf -s -T -t -U -up -V -v -X
 
-        cli:execute cli:execute-phase 
-        archetype:generate generate-sources 
+        cli:execute cli:execute-phase
+        archetype:generate generate-sources
         cobertura:cobertura
         -Dtest= `if [ -d ./src/test/java ] ; then find ./src/test/java -type f -name '*.java' | grep -v svn | sed 's?.*/\([^/]*\)\..*?-Dtest=\1?' ; fi`
-    ); 
+    );
 }
 
 compctl -K listMavenCompletions mvn

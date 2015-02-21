@@ -8,7 +8,7 @@
 #
 #    zstyle :omz:plugins:chruby path /local/path/to/chruby.sh
 #    zstyle :omz:plugins:chruby auto /local/path/to/auto.sh
-# 
+#
 # TODO
 #  - autodetermine correct source path on non OS X systems
 #  - completion if ruby-install exists

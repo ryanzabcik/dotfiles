@@ -21,7 +21,7 @@ alias v='vim'
 alias sys='sudo systemctl'
 alias net='sudo netctl'
 
-# new functions 
+# new functions
 alias lsmnt='mount | column -t'
 alias dl='cd /mnt/data0/Downloads'
 alias db='cd /mnt/data0/Dropbox'

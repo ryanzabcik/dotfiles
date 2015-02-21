@@ -1,6 +1,6 @@
 # Plugin for highligthing file content
 # Plugin highlights file content based on the filename extension.
-# If no highlighting method supported for given extension then it tries 
+# If no highlighting method supported for given extension then it tries
 # guess it by looking for file content.
 
 alias colorize='colorize_via_pygmentize'

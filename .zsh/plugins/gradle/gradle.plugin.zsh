@@ -1,6 +1,6 @@
 #!zsh
 ##############################################################################
-# A descriptive listing of core Gradle commands 
+# A descriptive listing of core Gradle commands
 ############################################################################
 function _gradle_core_commands() {
     local ret=1 state

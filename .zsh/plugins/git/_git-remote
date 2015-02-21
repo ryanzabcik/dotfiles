@@ -67,7 +67,7 @@ _git-remote () {
             ':branch name:__git_remotes' \
             ':url:_urls' && ret=0
           ;;
-          
+
       esac
       ;;
   esac

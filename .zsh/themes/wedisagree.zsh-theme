@@ -5,9 +5,9 @@
 # - Place that bundle in ~/Library/Application\ Support/SIMBL/Plugins (create that folder if it doesn't exist)
 # - Open Terminal preferences. Go to Settings -> Text -> More
 # - Change default colours to your liking.
-# 
+#
 # Here are the colours from Textmate's Monokai theme:
-# 
+#
 # Black: 0, 0, 0
 # Red: 229, 34, 34
 # Green: 166, 227, 45
@@ -28,7 +28,7 @@ PROMPT='%{$fg[magenta]%}[%c] %{$reset_color%}'
 RPROMPT='${time} %{$fg[magenta]%}$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}$(git_prompt_ahead)%{$reset_color%}'
 
 # Add this at the start of RPROMPT to include rvm info showing ruby-version@gemset-name
-# %{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%} 
+# %{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}
 
 # local time, color coded by last return code
 time_enabled="%(?.%{$fg[green]%}.%{$fg[red]%})%*%{$reset_color%}"
@@ -50,7 +50,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} 𝝙"
 
 # More symbols to choose from:
 # ☀ ✹ ☄ ♆ ♀ ♁ ♐ ♇ ♈ ♉ ♚ ♛ ♜ ♝ ♞ ♟ ♠ ♣ ⚢ ⚲ ⚳ ⚴ ⚥ ⚤ ⚦ ⚒ ⚑ ⚐ ♺ ♻ ♼ ☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷
-# ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠ 
+# ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠
 # ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬒ ⬓ ⬔ ⬕ ⬖ ⬗ ⬘ ⬙ ⬟  ⬤ 〒 ǀ ǁ ǂ ĭ Ť Ŧ
 
 # Determine if we are using a gemset.
@@ -58,7 +58,7 @@ function rvm_gemset() {
     GEMSET=`rvm gemset list | grep '=>' | cut -b4-`
     if [[ -n $GEMSET ]]; then
         echo "%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
-    fi 
+    fi
 }
 
 # Determine the time since last commit. If branch is clean,
@@ -75,12 +75,12 @@ function git_time_since_commit() {
             # Totals
             MINUTES=$((seconds_since_last_commit / 60))
             HOURS=$((seconds_since_last_commit/3600))
-           
+
             # Sub-hours and sub-minutes
             DAYS=$((seconds_since_last_commit / 86400))
             SUB_HOURS=$((HOURS % 24))
             SUB_MINUTES=$((MINUTES % 60))
-            
+
             if [[ -n $(git status -s 2> /dev/null) ]]; then
                 if [ "$MINUTES" -gt 30 ]; then
                     COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG"

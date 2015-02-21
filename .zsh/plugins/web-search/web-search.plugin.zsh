@@ -38,7 +38,7 @@ function web_search() {
   done
 
   url="${url%?}" # remove the last '+'
-  
+
   $open_cmd "$url"
 }
 

@@ -1,6 +1,6 @@
 #compdef git-branch
 
-_git-branch () 
+_git-branch ()
 {
   declare l c m d
 

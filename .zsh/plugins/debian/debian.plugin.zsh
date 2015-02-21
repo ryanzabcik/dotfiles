@@ -121,9 +121,9 @@ apt_pref_compdef() {
     f="_apt_pref_${2}"
 
     eval "function ${f}() {
-        shift words; 
-	service=\"\$apt_pref\"; 
-	words=(\"\$apt_pref\" '$2' \$words); 
+        shift words;
+	service=\"\$apt_pref\";
+	words=(\"\$apt_pref\" '$2' \$words);
 	((CURRENT++))
 	test \"\${apt_pref}\" = 'aptitude' && _aptitude || _apt
     }"

@@ -5,8 +5,8 @@ function xc {
   then
     echo "No xcworkspace/xcodeproj file found in the current directory."
   else
-    echo "Found $xcode_proj" 
-    open "$xcode_proj" 
+    echo "Found $xcode_proj"
+    open "$xcode_proj"
   fi
 }
 

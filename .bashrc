@@ -8,7 +8,7 @@
 # variables
 [ -e "$HOME/.profile" ] && . "$HOME/.profile"
 export LS_COLORS='di=1;34:fi=0:ln=36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
-if [ "$TERM" == "xterm" ]; then 
+if [ "$TERM" == "xterm" ]; then
     export TERM="xterm-256color"
 fi
 

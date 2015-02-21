@@ -1,4 +1,4 @@
-#compdef vagrant 
+#compdef vagrant
 #autoload
 
 # vagrant zsh completion
@@ -70,7 +70,7 @@ __vagrant-box ()
        (options)
            case $line[1] in
                (repackage|remove)
-                   _arguments ':feature:__box_list' 
+                   _arguments ':feature:__box_list'
                ;;
            esac
        ;;
@@ -99,7 +99,7 @@ case $state in
   (options)
     case $line[1] in
       (help)
-         _arguments ':feature:__task_list' 
+         _arguments ':feature:__task_list'
       ;;
 
       (box)

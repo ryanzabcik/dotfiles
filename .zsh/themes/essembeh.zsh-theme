@@ -12,9 +12,9 @@ function my_git_prompt_info() {
 }
 
 # Colored prompt
-ZSH_THEME_COLOR_USER="green" 
-ZSH_THEME_COLOR_HOST="green" 
-ZSH_THEME_COLOR_PWD="yellow" 
+ZSH_THEME_COLOR_USER="green"
+ZSH_THEME_COLOR_HOST="green"
+ZSH_THEME_COLOR_PWD="yellow"
 test -n "$SSH_CONNECTION" && ZSH_THEME_COLOR_USER="red" && ZSH_THEME_COLOR_HOST="red"
 test `id -u` = 0 && ZSH_THEME_COLOR_USER="magenta" && ZSH_THEME_COLOR_HOST="magenta"
 PROMPT='%{$fg_bold[$ZSH_THEME_COLOR_USER]%}%n@%{$fg_bold[$ZSH_THEME_COLOR_HOST]%}%M%{$reset_color%}:%{$fg_bold[$ZSH_THEME_COLOR_PWD]%}%~%{$reset_color%} $(my_git_prompt_info)%(!.#.$) '

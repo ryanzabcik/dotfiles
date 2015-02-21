@@ -2,7 +2,7 @@
 # See README.md
 #
 # Derek Wyatt (derek@{myfirstnamemylastname}.org
-# 
+#
 
 function resolveFile
 {

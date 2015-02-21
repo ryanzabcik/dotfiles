@@ -2,12 +2,12 @@
 # #
 # # #README
 # #
-# # This theme provides two customizable header functionalities : 
+# # This theme provides two customizable header functionalities :
 # # a) displaying a pseudo-random message from a database of quotations
 # # (https://en.wikipedia.org/wiki/Fortune_%28Unix%29)
-# # b) displaying randomly command line tips from The command line fu 
+# # b) displaying randomly command line tips from The command line fu
 # # (http://www.commandlinefu.com) community: in order to make use of this functionality
-# # you will need Internet connection. 
+# # you will need Internet connection.
 # # This theme provides as well information for the current user's context, like;
 # # branch and status for the current version control system (git and svn currently
 # # supported) and time, presented to the user in a non invasive volatile way.
@@ -25,11 +25,11 @@
 # # -Solarized theme (https://github.com/altercation/solarized/)
 # # -OS X: iTerm 2 (http://www.iterm2.com/)
 # # -font Source code pro (https://github.com/adobe/source-code-pro)
-# # 
+# #
 # # Author: Adolfo Benedetti
 # # email: adolfo.benedetti@gmail.com
 # # License: Public Domain
-# # This theme's look and feel is based on the Aaron Toponce's zsh theme , more info: 
+# # This theme's look and feel is based on the Aaron Toponce's zsh theme , more info:
 # # http://pthree.org/2008/11/23/727/
 # # enjoy!
 ########## COLOR ###########
@@ -72,17 +72,17 @@ function precmd {
         #Choose from all databases, regardless of whether they are considered "offensive"
         fortune -a
     }
-    #obtains the tip 
+    #obtains the tip
     ps1_command_tip () {
         wget -qO - http://www.commandlinefu.com/commands/random/plaintext | sed 1d | sed '/^$/d'
-    }  
+    }
     prompt_header () {
         if [[ "true" == "$ENABLE_COMMAND_TIP" ]]; then
             ps1_command_tip
         else
             ps1_fortune
-        fi 
-    }   
+        fi
+    }
     PROMPT_HEAD="${RED_START}${PR_YELLOW}$(prompt_header)${PR_RESET}"
     # set a simple variable to show when in screen
     if [[ -n "${WINDOW}" ]]; then
@@ -106,8 +106,8 @@ set_prompt () {
     autoload colors zsh/terminfo
     if [[ "$terminfo[colors]" -gt 8 ]]; then
         colors
-    fi 
-    
+    fi
+
     # ######### PROMPT #########
     PROMPT='${PROMPT_HEAD}
 ${RED_START}$(prompt_context)

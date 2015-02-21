@@ -606,7 +606,7 @@ kterm (as of version 6.2.0)
                       colors manually.
 
                       Better handling for the |inverse| (aka reverse) attribute
-                      for terminals that actually support it - and add the 
+                      for terminals that actually support it - and add the
                       g:CSApprox_fake_reverse config variable to allow
                       switching back to the old behavior for terminals that
                       don't support real reverse video.

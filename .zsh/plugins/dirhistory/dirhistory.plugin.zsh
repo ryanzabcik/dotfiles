@@ -1,7 +1,7 @@
-## 
-#   Navigate directory history using ALT-LEFT and ALT-RIGHT. ALT-LEFT moves back to directories 
+##
+#   Navigate directory history using ALT-LEFT and ALT-RIGHT. ALT-LEFT moves back to directories
 #   that the user has changed to in the past, and ALT-RIGHT undoes ALT-LEFT.
-# 
+#
 
 dirhistory_past=(`pwd`)
 dirhistory_future=()
@@ -10,8 +10,8 @@ export dirhistory_future
 
 export DIRHISTORY_SIZE=30
 
-# Pop the last element of dirhistory_past. 
-# Pass the name of the variable to return the result in. 
+# Pop the last element of dirhistory_past.
+# Pass the name of the variable to return the result in.
 # Returns the element if the array was not empty,
 # otherwise returns empty string.
 function pop_past() {
@@ -28,7 +28,7 @@ function pop_future() {
   fi
 }
 
-# Push a new element onto the end of dirhistory_past. If the size of the array 
+# Push a new element onto the end of dirhistory_past. If the size of the array
 # is >= DIRHISTORY_SIZE, the array is shifted
 function push_past() {
   if [[ $#dirhistory_past -ge $DIRHISTORY_SIZE ]]; then
@@ -70,7 +70,7 @@ function dirhistory_back() {
   local d=""
   # Last element in dirhistory_past is the cwd.
 
-  pop_past cw 
+  pop_past cw
   if [[ "" == "$cw" ]]; then
     # Someone overwrote our variable. Recover it.
     dirhistory_past=(`pwd`)
@@ -103,7 +103,7 @@ function dirhistory_forward() {
 function dirhistory_zle_dirhistory_back() {
   # Erase current line in buffer
   zle kill-buffer
-  dirhistory_back 
+  dirhistory_back
   zle accept-line
 }
 

@@ -7,7 +7,7 @@ _fishy_collapsed_wd() {
       binmode STDOUT, ':encoding(UTF-8)';
    }; s|^$HOME|~|g; s|/([^/])[^/]*(?=/)|/\$1|g
 ")
-} 
+}
 
 local user_color='green'; [ $UID -eq 0 ] && user_color='red'
 PROMPT='%n@%m %{$fg[$user_color]%}$(_fishy_collapsed_wd)%{$reset_color%}%(!.#.>) '

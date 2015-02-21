@@ -3,7 +3,7 @@ precmd () {
     FILL=""
     while [ "$FILLSIZE" -gt "0" ]
     do
-        FILL="$LINECHAR${FILL}" # FILL with underscores to work on 
+        FILL="$LINECHAR${FILL}" # FILL with underscores to work on
         let FILLSIZE=${FILLSIZE}-1
     done
 }
@@ -63,7 +63,7 @@ print(str(as_int % 34 * 6 + 16))
     fi
 fi
 
-# Other possible prefix characters: 
+# Other possible prefix characters:
 # Gullimet           U+00BB »
 # Electric arrow     U+2301 ⌁
 # Bullet             U+2202 •

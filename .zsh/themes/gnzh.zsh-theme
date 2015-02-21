@@ -25,7 +25,7 @@ elif [[ $UID -eq 0 ]]; then # root
 fi
 
 # Check if we are on SSH or not
-if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then 
+if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then
   eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
 else
   eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH

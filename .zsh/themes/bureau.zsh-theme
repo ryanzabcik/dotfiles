@@ -84,10 +84,10 @@ _LIBERTY="$_LIBERTY%{$reset_color%}"
 get_space () {
   local STR=$1$2
   local zero='%([BSUbfksu]|([FB]|){*})'
-  local LENGTH=${#${(S%%)STR//$~zero/}} 
+  local LENGTH=${#${(S%%)STR//$~zero/}}
   local SPACES=""
   (( LENGTH = ${COLUMNS} - $LENGTH - 1))
-  
+
   for i in {0..$LENGTH}
     do
       SPACES="$SPACES "

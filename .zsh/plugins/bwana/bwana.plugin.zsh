@@ -8,6 +8,6 @@ then
     open "man:$1"
   }
 else
-  echo "Bwana lets you read man files in Safari through a man: URI scheme" 
+  echo "Bwana lets you read man files in Safari through a man: URI scheme"
   echo "To use it within Zsh, install it from http://www.bruji.com/bwana/"
 fi

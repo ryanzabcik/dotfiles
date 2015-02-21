@@ -5,7 +5,7 @@ function sudo-accept-line {
         zle accept-line
     elif [ -n "${BUFFER## *}" ]; then
         BUFFER="sudo ${BUFFER## *sudo }"
-        zle end-of-line        
+        zle end-of-line
         zle accept-line
     fi
 }

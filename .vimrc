@@ -3,10 +3,10 @@ set nocompatible
 " Pathogen
 call pathogen#infect()
 call pathogen#helptags()
- 
+
 "set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 filetype plugin indent on
- 
+
 set mouse=a
 set mousehide
 
@@ -30,7 +30,7 @@ if filewritable("/var/vim")
 elseif filewritable($HOME . "/.cache/vim")
     set directory=$HOME/.cache/vim
 else
-	let choice = confirm("Neither the /var/vim nor the ~/.cache/vim directories exist; use which directory?", "&.\n&/tmp\n&Create the ~/.cache/vim directory", 1) 
+	let choice = confirm("Neither the /var/vim nor the ~/.cache/vim directories exist; use which directory?", "&.\n&/tmp\n&Create the ~/.cache/vim directory", 1)
     if choice == 1
         set directory=.
     elseif choice == 2

@@ -1,6 +1,6 @@
-# 
+#
 # Kiwi ZSH Theme
-# 
+#
 
 PROMPT='%{$fg_bold[green]%}┌[%{$fg_bold[cyan]%}kiwish-4.2%{$fg_bold[green]%}]-(%{$fg_bold[white]%}%2~%{$fg_bold[green]%})-$(git_prompt_info)$(svn_prompt_info)$(battery_pct_prompt)
 └> % %{$reset_color%}'

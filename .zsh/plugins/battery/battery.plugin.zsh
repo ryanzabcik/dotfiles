@@ -91,7 +91,7 @@ elif [[ $(uname) == "Linux"  ]] ; then
   }
 
   function battery_pct_prompt() {
-    b=$(battery_pct_remaining) 
+    b=$(battery_pct_remaining)
     if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
       if [ $b -gt 50 ] ; then
         color='green'

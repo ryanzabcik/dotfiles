@@ -2,10 +2,10 @@
 #
 # Author: Sean Jones
 # URL: http://www.neuralsandwich.com
-# Repo: 
+# Repo:
 # Direct link:
 # Create:
-# Modified: 
+# Modified:
 
 if [ "x$OH_MY_ZSH_HG" = "x" ]; then
     OH_MY_ZSH_HG="hg"

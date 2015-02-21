@@ -37,14 +37,14 @@ function pacsize {
 
 # usage: plays back a text-to-speech recording of the argument(s)
 
-function say { 
+function say {
 	if [[ "${1}" =~ -[a-z]{2} ]]
-		then local lang=${1#-} 
-			local text="${*#$1}" 
-		else local lang=${LANG%_*} 
+		then local lang=${1#-}
+			local text="${*#$1}"
+		else local lang=${LANG%_*}
 			local text="$*"
 	fi
- 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" #&> /dev/null 
+ 	cvlc "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" "vlc://quit" #&> /dev/null
 }
 
 function until-success {
@@ -87,7 +87,7 @@ function sudo-accept-line {
         zle accept-line
     elif [ -n "${BUFFER## *}" ]; then
         BUFFER="sudo ${BUFFER## *sudo }"
-        zle end-of-line        
+        zle end-of-line
         zle accept-line
     fi
 }

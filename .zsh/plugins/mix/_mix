@@ -1,4 +1,4 @@
-#compdef mix 
+#compdef mix
 #autoload
 
 # Elixir mix zsh completion
@@ -56,7 +56,7 @@ case $state in
   (options)
     case $line[1] in
       (help)
-         _arguments ':feature:__task_list' 
+         _arguments ':feature:__task_list'
     esac
   ;;
 esac

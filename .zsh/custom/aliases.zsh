@@ -29,7 +29,7 @@ alias ex='vim -e'
 alias cb='xclip -selection clipboard'
 alias can='trash-put'
 
-# new functions 
+# new functions
 alias lsmnt='mount | column -t'
 alias yupd='yaourt -Syua --devel --noconfirm'
 alias upd='if [ "$(date +%u)" = 7 ]; then yaourt -Syua --devel; sudo abs; else sudo pacman -Su; fi'

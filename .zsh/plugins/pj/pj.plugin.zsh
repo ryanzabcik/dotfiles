@@ -11,7 +11,7 @@
 #    the plugin will locate the `my-project` directory in one of the $PROJECT_PATHS
 #    Also tab completion is supported.
 #  - `pjo my-project` will open the directory in $EDITOR
-# 
+#
 
 function pj() {
     cmd="cd"

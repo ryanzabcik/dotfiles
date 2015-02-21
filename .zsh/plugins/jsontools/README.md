@@ -6,7 +6,7 @@ Handy command line tools for dealing with json data.
 
 - **pp_json** - pretty prints json
 - **is_json** - returns true if valid json; false otherwise
-- **urlencode_json** - returns a url encoded string for the given json 
+- **urlencode_json** - returns a url encoded string for the given json
 - **urldecode_json** - returns decoded json for the given url encoded string
 
 ## Usage

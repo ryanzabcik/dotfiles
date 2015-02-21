@@ -15,5 +15,5 @@ If you notice that there are some errors in the way your file's structure is dis
 
 There is an example in `:h tagbar-issues` about how to run ctags manually so you can determine where the bug actually is. If the bug is actually in ctags, please report it on their website instead, as there is nothing I can do about it in Tagbar. Thank you!
 
-You can also have a look at ctags bugs that have previously been filed on Tagbar here:  
+You can also have a look at ctags bugs that have previously been filed on Tagbar here:
 https://github.com/majutsushi/tagbar/issues?labels=ctags-bug&page=1&state=closed
