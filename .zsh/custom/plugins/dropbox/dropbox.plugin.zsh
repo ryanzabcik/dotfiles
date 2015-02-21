@@ -5,7 +5,7 @@ fi
 
 dropbox_status () {
     if [ "$USE_DROPBOX" ] && [ "$(pwd -P)" = "$DROPBOX_DIR" ]; then
-        echo -n "$ZSH_THEME_DROPBOX_PROMPT_PREFIX$(dropbox status)$ZSH_THEME_DROPBOX_PROMPT_SUFFIX"
+        echo -n "$ZSH_THEME_DROPBOX_PROMPT_PREFIX$(dropbox-cli status)$ZSH_THEME_DROPBOX_PROMPT_SUFFIX"
     fi
 }
 
