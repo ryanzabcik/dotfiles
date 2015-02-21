@@ -13,6 +13,8 @@ function netctl_wrapper() {
         fi
     elif [[ $1 == restart ]] || [[ $1 == status ]]; then
         $netctl $1 $current
+    else
+        $netctl $@
     fi
 }
 
