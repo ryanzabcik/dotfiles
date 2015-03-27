@@ -9,6 +9,8 @@ alias xclip='xclip -display :0'
 alias du='du -h'
 alias df='df -h'
 alias dropbox="DISPLAY=:0 dropbox"
+alias find='noglob find'
+alias lsblk='lsblk -o MODEL,NAME,SIZE,FSTYPE,LABEL,MOUNTPOINT,UUID'
 
 # short
 alias l='env LC_ALL=C ls -lAXvhk --group-directories-first --color=auto'
@@ -32,8 +34,8 @@ alias can='trash-put'
 # new functions
 alias lsmnt='mount | column -t'
 alias yupd='yaourt -Syua --devel --noconfirm'
-alias upd='if [ "$(date +%u)" = 7 ]; then yaourt -Syua --devel; sudo abs; else sudo pacman -Su; fi'
-alias upd\!='yaourt -Syua --devel && sudo abs'
+alias upd='if [ "$(date +%u)" = 7 ]; then yaourt -Syua --devel --noconfirm; sudo abs; else sudo pacman -Su; fi'
+alias upd\!='yaourt --noconfirm -Syua --devel && sudo abs'
 alias vimcrypt='vim -u ~/.vimcrypt -x'
 alias nettest='ping -c 5 8.8.8.8 && curl http://speedtest.dallas.linode.com/100MB-dallas.bin -m 5 > /dev/null'
 alias netstop='sudo netctl stop-all'
