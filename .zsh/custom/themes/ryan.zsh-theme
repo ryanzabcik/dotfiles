@@ -74,10 +74,8 @@ fi
 # Round arrow        U+279C ➜
 
 PROMPT='%{$LCOLOR$FILL%} %*
-%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PREFIX %f'
+%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PREFIX %f'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_STASHED="^"
-ZSH_THEME_DROPBOX_PROMPT_PREFIX=" ("
-ZSH_THEME_DROPBOX_PROMPT_SUFFIX=")"

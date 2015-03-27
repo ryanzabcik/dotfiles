@@ -46,6 +46,7 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump control-keys netctl-wrapper)
+plugins=(git cabal vi-mode tmux ls-cd control-keys)
 
 source $ZSH/oh-my-zsh.sh
 #source $HOME/.profile
