@@ -48,7 +48,7 @@ fi
 plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump control-keys netctl-wrapper)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
+#source $HOME/.profile
 
 # Customize to your needs...
 
