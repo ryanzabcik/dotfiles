@@ -55,6 +55,16 @@ set listchars=trail:~,tab:→\ ,eol:¬
 
 let mapleader=" "
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|o)$',
+  \ }
+
+let g:vim_markdown_folding_disabled = 1
+
+""""""""""
+" Mappings
+
 "map ; :
 "noremap ;; ;
 "map ;q :q
