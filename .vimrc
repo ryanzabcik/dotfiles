@@ -99,11 +99,7 @@ map <Left> gT
 map <Up> :bprev<CR>
 map <Down> :bnext<CR>
 
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|o)$',
-  \ }
-
 vmap <Leader>= :'<,'>Tabularize /=<CR>
+vmap <Leader>: :'<,'>Tabularize /:\zs<CR>
 vnoremap <Leader>w :'<,'>w !wc -w<CR>
-noremap <Leader>w :%w !wc -w<CR>
+nnoremap <Leader>w :%w !wc -w<CR>
