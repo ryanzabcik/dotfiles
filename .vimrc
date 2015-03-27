@@ -23,6 +23,7 @@ set tabstop=4
 set softtabstop=4
 set linebreak
 set tags=tags;/
+set backspace=indent,eol,start
 
 if filewritable("/var/vim")
 	set directory=/var/vim
