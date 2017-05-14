@@ -48,7 +48,7 @@ fi
 plugins=(git cabal vi-mode tmux dropbox ls-cd pacman-notify autojump control-keys netctl-wrapper)
 
 source $ZSH/oh-my-zsh.sh
-#source $HOME/.profile
+source $HOME/.profile
 
 # Customize to your needs...
 
@@ -68,4 +68,3 @@ setopt noclobber # don't overwrite files with > Instead use >! or >>
 
 # /dev/null is too useful to be this long, so a ? in a token by itself will expand to it
 alias -g \?=/dev/null
-alias -g ·=/dev/null # center dot, unicode U+00B7, type with ComposeKey + . + -

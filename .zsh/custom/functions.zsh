@@ -27,10 +27,6 @@ function webpass {
     echo >&2
 }
 
-function random.org {
-    curl "http://www.random.org/integers/?num=1&min=""$1""&max=""$2""&col=1&base=10&format=plain&rnd=new"
-}
-
 function pacsize {
      pacman -Qi $(pacman -Qq) | grep 'Name\|Size' | cut -d: -f2 | paste - - | column -t | sort -nk2
 }
