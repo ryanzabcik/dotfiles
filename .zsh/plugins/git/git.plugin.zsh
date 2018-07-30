@@ -9,12 +9,14 @@ alias gdc='git diff --cached'
 compdef _git gdc=git-diff
 alias gdt='git difftool'
 compdef _git gdt=git-difftool
-alias gl='git pull'
-compdef _git gl=git-pull
+alias gl='git fetch && git merge --ff-only'
+compdef _git gl=git-merge
 alias gup='git pull --rebase'
-compdef _git gup=git-fetch
+compdef _git gup=git-pull
 alias gp='git push --recurse-submodules=on-demand'
 compdef _git gp=git-push
+alias gpsu='git push --set-upstream'
+compdef _git gpsu=git-push
 alias gd='git diff'
 gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
@@ -31,6 +33,7 @@ compdef _git gcmsg=git-commit
 alias gco='git checkout'
 compdef _git gco=git-checkout
 alias gcm='git checkout master'
+alias gcd='git checkout development'
 alias gr='git remote'
 compdef _git gr=git-remote
 alias grv='git remote -v'

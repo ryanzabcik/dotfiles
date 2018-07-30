@@ -1,5 +1,5 @@
 # remaps
-alias ls='ls -v --color=auto'
+alias ls='gls -v --color=auto'
 alias pushd='pushd .'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
