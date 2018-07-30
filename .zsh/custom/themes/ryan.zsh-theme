@@ -14,17 +14,17 @@ TRAPWINCH () {
 LS_COLORS='di=1;34:fi=0:ln=1;36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
 
 if [[ $(locale charmap) != UTF-8 ]] || [ "$TERM" = linux ]; then
-    PREFIX=">"
+    PROMPT_SEPARATOR=">"
     LINECHAR="-"
     LCOLOR=""
 else
-    PREFIX="❱" # U+2771
+    PROMPT_SEPARATOR="❱" # U+2771
     LINECHAR="─"
     LCOLOR="$fg_bold[black]"
 fi
 
 if [ $EUID -eq 0 ]; then
-    PREFIX="#%b"
+    PROMPT_SEPARATOR="#%b"
 fi
 
 if [[ $TERM = *256color ]]; then
@@ -74,7 +74,7 @@ fi
 # Round arrow        U+279C ➜
 
 PROMPT='%{$LCOLOR$FILL%} %*
-%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info)$(dropbox_status) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PREFIX %f'
+%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PROMPT_SEPARATOR %f'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
