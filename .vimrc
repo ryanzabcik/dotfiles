@@ -3,6 +3,7 @@ set nocompatible
 " Pathogen
 call pathogen#infect()
 call pathogen#helptags()
+set runtimepath-=~/.vim/bundle/supertab
 
 filetype plugin indent on
 
@@ -18,9 +19,9 @@ set autoindent
 set history=1000
 set cursorline
 set expandtab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set linebreak
 set tags=tags;/
 set backspace=indent,eol,start
