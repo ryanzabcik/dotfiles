@@ -45,10 +45,12 @@ set ttimeoutlen=200 " make vim quicker to recognize ESC
 
 set background=dark
 colorscheme wombat
-if has("gui_macvim")
-    set guifont=Droid\ Sans\ Mono\ Slashed:h14
-else
-    set guifont=Droid\ Sans\ Mono\ Slashed\ 14
+if has("gui")
+    if has("gui_macvim")
+        set guifont=Fantasque\ Sans\ Mono:h14
+    else
+        set guifont=Fantasque\ Sans\ Mono 14
+    endif
 endif
 set guioptions-=T
 set listchars=trail:~,tab:→\ ,eol:¬
