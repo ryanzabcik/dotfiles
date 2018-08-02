@@ -11,8 +11,6 @@ function netctl_wrapper() {
         else
             $netctl stop $2
         fi
-    elif [[ $1 == restart ]] || [[ $1 == status ]]; then
-        $netctl $1 $current
     else
         $netctl $@
     fi
