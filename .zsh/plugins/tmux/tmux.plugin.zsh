@@ -10,7 +10,7 @@ if which tmux &> /dev/null
     alias ta='tmux attach-session -t'
     alias tt='tmux new-session -t' # duplicate the session $1, sharing its windows
     alias tl='tmux list-sessions'
-    alias th="tmux attach-session -t '\~' || tmux new-session -c $HOME -s '\~'"
+    alias th="tmux attach-session -t '~' || tmux new-session -c $HOME -s '\~'"
 
 	# Configuration variables
 	#
