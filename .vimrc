@@ -49,7 +49,7 @@ if has("gui")
     if has("gui_macvim")
         set guifont=Fantasque\ Sans\ Mono:h14
     else
-        set guifont=Fantasque\ Sans\ Mono 14
+        set guifont=Fantasque\ Sans\ Mono\ 14
     endif
 endif
 set guioptions-=T
