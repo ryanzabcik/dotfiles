@@ -9,4 +9,8 @@ source "$NVM_DIR/nvm.sh"
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="/usr/local/opt/redis@2.8/bin:$PATH"
 export PATH="$PATH:/usr/local/bin"
+export PYCURL_SSL_LIBRARY=openssl
+export SLACK_TOKEN='xoxb-2202707434-388708803239-N5ukvTZdjLOGA5UtN0ZdVJfD'
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
 #export BROWSER='/usr/bin/google-chrome-stable'
