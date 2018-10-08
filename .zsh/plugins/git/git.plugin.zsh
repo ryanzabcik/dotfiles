@@ -15,6 +15,8 @@ alias gup='git pull --rebase'
 compdef _git gup=git-pull
 alias gp='git push --recurse-submodules=on-demand'
 compdef _git gp=git-push
+alias gpf='git push --force'
+compdef _git gpf=git-push
 alias gpsu='git push --set-upstream'
 compdef _git gpsu=git-push
 alias gd='git diff'
@@ -52,6 +54,8 @@ alias grbc='git rebase --continue'
 compdef _git grbc=git-rebase
 alias grba='git rebase --abort'
 compdef _git grba=git-rebase
+alias grbs='git rebase --skip'
+compdef _git grbs=git-rebase
 alias gb='git branch'
 compdef _git gb=git-branch
 alias gba='git branch -a'
