@@ -43,13 +43,13 @@ if [ "$TERM" = xterm ]; then
     TERM=xterm-256color
 fi
 
+source $HOME/.profile
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cabal vi-mode tmux ls-cd control-keys) #dropbox ls-cd pacman-notify autojump control-keys netctl-wrapper)
+plugins=(git vi-mode tmux ls-cd control-keys npm node) #dropbox pacman-notify autojump control-keys netctl-wrapper)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
 
 # Customize to your needs...
 

@@ -5,12 +5,16 @@ export PATH="$(getconf PATH)"
 export EDITOR='vim'
 export PAGER='less -R'
 export NVM_DIR="$HOME/.nvm"
-source "$NVM_DIR/nvm.sh"
+#source "$NVM_DIR/nvm.sh"
+#nvm use v10.16.3
+export NODE_ENV=development
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
-export PATH="/usr/local/opt/redis@2.8/bin:$PATH"
-export PATH="$PATH:/usr/local/bin"
-export PYCURL_SSL_LIBRARY=openssl
+export PATH="/usr/local/opt/redis@3.2/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+#export PYCURL_SSL_LIBRARY=openssl
 export SLACK_TOKEN='xoxb-2202707434-388708803239-N5ukvTZdjLOGA5UtN0ZdVJfD'
+#export MONGO_URL='mongodb://readOnly:cdYaukQqVV@ds045670-a1.bxp01.fleet.mlab.com:45670/?authSource=production&authMechanism=SCRAM-SHA-1'
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 #export BROWSER='/usr/bin/google-chrome-stable'
+export GITHUB_AUTH_TOKEN="372243cdf96aa46f3f0b44b8d7e3ec2d16c9e047"
