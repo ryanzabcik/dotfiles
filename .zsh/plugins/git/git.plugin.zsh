@@ -15,6 +15,10 @@ alias gup='git pull --rebase'
 compdef _git gup=git-fetch
 alias gp='git push --recurse-submodules=on-demand'
 compdef _git gp=git-push
+alias gpf='git push --force'
+compdef _git gpf=git-push
+alias gpsu='git push --set-upstream'
+compdef _git gpsu=git-push
 alias gd='git diff'
 gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
