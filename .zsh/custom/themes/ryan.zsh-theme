@@ -1,14 +1,5 @@
 precmd () {
-    let FILLSIZE=${COLUMNS}-9
-    FILL=""
-    while [ "$FILLSIZE" -gt "0" ]
-    do
-        FILL="$LINECHAR${FILL}" # FILL with underscores to work on
-        let FILLSIZE=${FILLSIZE}-1
-    done
-}
-TRAPWINCH () {
-    precmd
+    print -rP "%{$LCOLOR%}${(pl:COLUMNS-9::$LINECHAR:)} %*%{$reset_color%}"
 }
 
 LS_COLORS='di=1;34:fi=0:ln=1;36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
@@ -73,8 +64,7 @@ fi
 # Arrowhead          U+27A4 ➤
 # Round arrow        U+279C ➜
 
-PROMPT='%{$LCOLOR$FILL%} %*
-%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PROMPT_SEPARATOR %f'
+PROMPT='%{$reset_color$PCOLOR[1]%}%m%{$PCOLOR[2]%} %2~%{$PCOLOR[3]%}$(git_prompt_info) %(?.%{$PCOLOR[4]%}.%{$fg[red]%}%?)$PROMPT_SEPARATOR %f'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
