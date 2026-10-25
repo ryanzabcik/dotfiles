@@ -14,3 +14,4 @@ ln -s $dir/.vimrc
 ln -s $dir/.vimcrypt
 ln -s $dir/.tmux.conf
 ln -s $dir/.profile
+ln -s $dir/.oh-my-zsh
