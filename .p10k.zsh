@@ -1828,6 +1828,38 @@
   # really need it.
   typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
 
+  #################[ host-based colors ]#################
+  local -a pcolor
+  if (( EUID == 0 )); then
+    pcolor=(196 196 196 196)
+  elif [[ $HOST == tachyon* ]]; then
+    pcolor=(039 037 035 040)
+  elif (( $+commands[python3] )); then
+    local basenum=$(python3 -c '
+import hashlib, sys
+h = int(hashlib.md5(sys.argv[1].encode("utf-8")).hexdigest(), 16)
+print(h % 34 * 6 + 16)
+' "$HOST")
+    pcolor=(
+      $(( basenum ))
+      $(( basenum + 2 ))
+      $(( basenum + 4 ))
+      $(( basenum + 5 ))
+    )
+  else
+    pcolor=(3 7 2 76)
+  fi
+
+  # Context (user@hostname) foreground color
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=$pcolor[1]
+  typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE,REMOTE_SUDO,SUDO}_FOREGROUND=$pcolor[1]
+
+  # OS icon background color
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=$pcolor[2]
+
+  # Prompt character (❯) color when last command succeeded
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=$pcolor[4]
+
   # If p10k is already loaded, reload configuration.
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
   (( ! $+functions[p10k] )) || p10k reload
