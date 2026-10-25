@@ -1,8 +1,8 @@
 reset_style='\[\033[00m\]'
 prompt_style=$reset_style
 
-PS1="$prompt_style\h \W > "
-# other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
+PROMPT_SEPARATOR="❱" # U+2771
+PS1="$prompt_style\h \W $PROMPT_SEPARATOR "
 
 # a more distinguished root style
 if [[ $(id -u) == 0 ]];
