@@ -98,6 +98,9 @@ else
   export EDITOR='gvim'
 fi
 
+# make LS pretty
+LS_COLORS='di=1;34:fi=0:ln=1;36:pi=33:so=33:bd=33:cd=33:or=31:ex=32'
+
 # use up and down to search history by current line
 autoload up-line-or-beginning-search
 autoload down-line-or-beginning-search
