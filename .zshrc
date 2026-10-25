@@ -84,8 +84,8 @@ if [ "$TERM" = xterm ]; then
     TERM=xterm-256color
 fi
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
+# Preferred editor changes based on whether GUI is available
+if [[ -n $SSH_CONNECTION || -n $WSL_DISTRO_NAME ]]; then
   export EDITOR='vim'
 else
   export EDITOR='gvim'
