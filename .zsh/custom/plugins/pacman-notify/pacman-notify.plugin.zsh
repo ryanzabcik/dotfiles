@@ -1,3 +1,8 @@
+if ! which at >/dev/null 2>&1; then
+    echo 'at command not found. Please install the at package to use pacman-notify.'
+    return
+fi
+
 source "$(dirname $0)/kernel-updates.zsh"
 source "$(dirname $0)/package-updates.zsh"
 
