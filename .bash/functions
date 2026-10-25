@@ -1,33 +1,3 @@
-# webpass command: generates a password for every website
-
-# don't use this anymore, only here in case I can't reset a password
-function webpass {
-    #usage: webpass [-c] <website>
-
-    if [ "$1" = '-c' ]; then
-        local website=$2
-        local clipboard=yes
-    else
-        local website=$1
-    fi
-    stty -echo
-    echo -n "Password: " >&2
-    read password
-    echo >&2
-    echo -n "Confirm Password: " >&2
-    read confirm
-    echo >&2
-    stty echo
-    [ "$password" = "$confirm" ] || { echo 'Passwords do not match.'; return 1 }
-    if [ "$clipboard" ]; then
-        echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]' | xclip -selection clipboard -i
-        echo -n Copied to clipboard.
-    else
-        echo "$password$website" | sha1sum - | cut -d" " -f1 | xxd -r -p | base64 | tr -d -c '[:alnum:]'
-    fi
-    echo >&2
-}
-
 function pacsize {
      pacman -Qi $(pacman -Qq) | grep 'Name\|Size' | cut -d: -f2 | paste - - | column -t | sort -nk2
 }
