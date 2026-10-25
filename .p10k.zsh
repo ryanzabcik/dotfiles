@@ -37,6 +37,7 @@
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
+    context                 # user@hostname
     prompt_char             # prompt symbol
   )
 
