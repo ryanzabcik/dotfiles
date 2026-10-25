@@ -1,17 +1,12 @@
-# Fill with minuses
-# (this is recalculated every time the prompt is shown in function prompt_command):
-fill="--- "
-
 reset_style='\[\033[00m\]'
-status_style=$reset_style'\[\033[0;90m\]' # gray color; use 0;37m for lighter color
 prompt_style=$reset_style
 
-PS1="$status_style"'$fill'" bash \t\n$prompt_style\h \W > "
+PS1="$prompt_style\h \W > "
 # other candidates for prelude characters: 𝄞❱➪▶⊳∬⚡
 
 # a more distinguished root style
 if [[ $(id -u) == 0 ]];
-    then PS1="$status_style"'$fill'" \t\n$prompt_style\[\033[1;31m\]\h \W # "
+    then PS1="$prompt_style\[\033[1;31m\]\h \W # "
 fi
 
 # Reset color for command output
@@ -21,14 +16,10 @@ trap 'echo -ne "\033[0m"' DEBUG EXIT
 
 function prompt_command {
 
-    # create a $fill of all screen width minus the time string and a space:
-    let fillsize=${COLUMNS}-14
-    fill=""
-    while [ "$fillsize" -gt "0" ]
-    do
-        fill="-${fill}" # fill with underscores to work on
-        let fillsize=${fillsize}-1
-    done
+    # print a separator line of all screen width minus " bash HH:MM:SS" (14 chars):
+    local fill
+    printf -v fill '%*s' "$((COLUMNS > 14 ? COLUMNS - 14 : 0))" ''
+    printf '\033[00m\033[0;90m%s bash %(%H:%M:%S)T\033[00m\n' "${fill// /-}" -1
 
     # If this is an xterm set the title to user@host:dir
     case "$TERM" in
