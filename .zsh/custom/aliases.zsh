@@ -11,7 +11,6 @@ alias findn='noglob find . -name'
 # new functions
 function mcd() { md $1; cd $1 }
 
-
 # global aliases
 alias -g G='| grep'
 alias -g L='| less'
