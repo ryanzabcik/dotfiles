@@ -195,6 +195,9 @@
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
+  if [[ -n $WSL_DISTRO_NAME ]]; then
+    typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${(g::)icons[WINDOWS_ICON]}'
+  fi
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
