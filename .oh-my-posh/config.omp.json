@@ -11,7 +11,7 @@
           "style": "plain",
           "foreground": "#26C6DA",
           "background": "#546E7A",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} pwsh \ue0b1"
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} {{ .Shell }} \ue0b1"
         },
         {
           "type": "text",
