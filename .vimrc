@@ -18,10 +18,10 @@ set incsearch
 set autoindent
 set history=1000
 set cursorline
-set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set tabstop=4      " Visual width of a literal tab character
+set shiftwidth=4   " Width of auto-indents and block shifts (>> and <<)
+set softtabstop=4  " Number of spaces inserted/removed when hitting Tab/Backspace
+set expandtab      " Convert all typed tabs into spaces
 set linebreak
 set tags=tags;/
 set backspace=indent,eol,start
