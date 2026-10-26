@@ -9,6 +9,7 @@ ln -s $dir/.bash
 ln -s $dir/.bashrc
 ln -s $dir/.zsh
 ln -s $dir/.zshrc
+ln -s $dir/.zprofile
 ln -s $dir/.vim
 ln -s $dir/.vimrc
 ln -s $dir/.vimcrypt
