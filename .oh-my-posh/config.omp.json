@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "extends": "D:\\Git\\dotfiles\\.oh-my-posh\\default.omp.json",
+  "type": "vimode",
+  "style": "plain",
+  "foreground": "#ffffff",
+  "background": "#0077c2",
+  "template": " {{ if eq .Mode \"normal\" }} NORMAL{{ else if eq .Mode \"visual\" }} VISUAL{{ else }} INSERT{{ end }} "
+}
