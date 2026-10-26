@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "extends": "D:\\Git\\dotfiles\\.oh-my-posh\\default.omp.json",
+  "extends": "powerlevel10k_classic",
   "blocks": [
     {
       "type": "prompt",
