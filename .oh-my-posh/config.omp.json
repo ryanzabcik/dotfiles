@@ -1,9 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "extends": "D:\\Git\\dotfiles\\.oh-my-posh\\default.omp.json",
-  "type": "vimode",
-  "style": "plain",
-  "foreground": "#ffffff",
-  "background": "#0077c2",
-  "template": " {{ if eq .Mode \"normal\" }} NORMAL{{ else if eq .Mode \"visual\" }} VISUAL{{ else }} INSERT{{ end }} "
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#0077c2",
+          "template": " {{ if eq .Env.POSH_VI_MODE \"normal\" }}\uf06d NORMAL{{ else }}\uf040 INSERT{{ end }} "
+        }
+      ]
+    }
+  ]
 }
