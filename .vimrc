@@ -25,6 +25,8 @@ set expandtab      " Convert all typed tabs into spaces
 set linebreak
 set tags=tags;/
 set backspace=indent,eol,start
+" turn off auto adding comments on next line
+set fo=tcq
 
 if filewritable("/var/vim")
 	set directory=/var/vim
