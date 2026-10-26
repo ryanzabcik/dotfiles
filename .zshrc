@@ -78,7 +78,7 @@ ZSH_CUSTOM=$HOME/.zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cabal vi-mode tmux ls-cd pacman-notify autojump)
+plugins=(git cabal vi-mode tmux ls-cd autojump)
 
 source $ZSH/oh-my-zsh.sh
 
