@@ -196,7 +196,7 @@
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
   if [[ -n $WSL_DISTRO_NAME ]]; then
-    typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${(g::)icons[WINDOWS_ICON]}'
+    typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${(g::)icons[WINDOWS_ICON]} WSL'
   fi
 
   ################################[ prompt_char: prompt symbol ]################################
