@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/rzabcik/.docker/bin"
+# End of Docker Desktop section.
+
 # this file is only for environment variables that are shell-independent
 export GOPATH=$HOME/code/go
 #export PATH=$PATH:$HOME/code/go/bin:$HOME/scripts:$HOME/.cabal/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.3.0/bin
