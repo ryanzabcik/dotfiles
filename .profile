@@ -8,3 +8,4 @@ export PAGER='less -R'
 
 export JAVA_HOME=$(brew --prefix openjdk@21)/libexec/openjdk.jdk/Contents/Home
 export PATH="$JAVA_HOME/bin:$PATH"
+export XDG_CONFIG_HOME=~/.config
