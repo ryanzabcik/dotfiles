@@ -5,3 +5,6 @@ export PATH="$PATH:/Users/rzabcik/.docker/bin"
 # this file is only for environment variables that are shell-independent
 export EDITOR='vim'
 export PAGER='less -R'
+
+export JAVA_HOME=$(brew --prefix openjdk@21)/libexec/openjdk.jdk/Contents/Home
+export PATH="$JAVA_HOME/bin:$PATH"
